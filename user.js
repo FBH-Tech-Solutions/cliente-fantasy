@@ -1,3 +1,9 @@
+
+import { inputInvalid } from './uax/funcs.js';
+
+let email = document.getElementById("email")
+
+inputInvalid(email)
 var errores=[];
 
 
@@ -68,3 +74,4 @@ function limpiarUsuario(){
     document.getElementById('dni').value=' '
     document.getElementById('fecha').value=' '
 }
+
