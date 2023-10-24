@@ -13,15 +13,11 @@ body{
 
 
 #login button{
-    background-color: rgb(203, 23, 23);
-    border-color: rgb(203, 23, 23);
+    background-color: rgb(249, 29, 0);
+    border-color: rgb(249, 29, 0);
     text-align: center;
     padding: 10px;
     width: 100px;
-}
-
-h1{
-    color: rgb(203, 23, 23);
 }
 
 .test {
@@ -33,5 +29,6 @@ h1 {
     background: -webkit-linear-gradient(left top, rgb(249, 29, 0), rgb(21, 21, 30));
     background: linear-gradient(to bottom right, rgb(249, 29, 0), rgb(21, 21, 30));
     -webkit-background-clip: text;  
-    -webkit-text-fill-color: transparent;  
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 5px;  
   }
