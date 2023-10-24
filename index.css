@@ -1,0 +1,30 @@
+body{
+    background-image: url(./assets/f1_coche.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+
+
+#login{
+
+    background-color: #262626;
+    margin-top: 50%; 
+}
+
+
+#login button{
+    background-color: rgb(203, 23, 23);
+    border-color: rgb(203, 23, 23);
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+}
+
+h1{
+    color: rgb(203, 23, 23);
+}
+
+.test {
+    color: white;
+}
+
