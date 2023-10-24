@@ -8,10 +8,7 @@ body{
 #login{
 
     background-color: #262626;
-    /* padding: 70px;
-    width: 25%;
-    margin-left: 40%;
-    margin-top: 10%; */
+    margin-top: 50%; 
 }
 
 
@@ -30,3 +27,4 @@ h1{
 .test {
     color: white;
 }
+
