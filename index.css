@@ -4,7 +4,9 @@ body{
     width: 100vw;
 }
 
+
 #login{
+
     background-color: #262626;
     /* padding: 70px;
     width: 25%;
@@ -12,9 +14,13 @@ body{
     margin-top: 10%; */
 }
 
+
 #login button{
     background-color: rgb(203, 23, 23);
     border-color: rgb(203, 23, 23);
+    text-align: center;
+    padding: 10px;
+    width: 100px;
 }
 
 h1{
