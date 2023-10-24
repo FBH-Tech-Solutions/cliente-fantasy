@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-    <title>signup | F1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">  
+<title>signup | F1</title>
 </head>
 <body>
     <div class="container">
-    <h1>Signup</h1>
+    <h1 style="font-family: 'Open Sans', sans-serif;">Signup</h1>
+    <div class="row">
 
+        <form class="row g-3">
+            <div class="col-md-4">
+          <label for="validationDefault01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" value="Mark" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault02" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="surname" value="Otto" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefaultUsername" class="form-label">Nickname</label>
+          <div class="input-group">
+              <span class="input-group-text" id="nickname">@</span>
+              <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="validationDefault03" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+</div>
 
     </div>
 
