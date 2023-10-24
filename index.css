@@ -4,17 +4,20 @@ body{
     width: 100vw;
 }
 
+
 #login{
+
     background-color: #262626;
-    /* padding: 70px;
-    width: 25%;
-    margin-left: 40%;
-    margin-top: 10%; */
+    margin-top: 50%; 
 }
+
 
 #login button{
     background-color: rgb(203, 23, 23);
     border-color: rgb(203, 23, 23);
+    text-align: center;
+    padding: 10px;
+    width: 100px;
 }
 
 h1{
@@ -24,3 +27,4 @@ h1{
 .test {
     color: white;
 }
+
