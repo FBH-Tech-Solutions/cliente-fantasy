@@ -5,20 +5,22 @@ body{
 }
 
 #login{
-    color: white;
     background-color: #262626;
-    padding: 70px;
+    /* padding: 70px;
     width: 25%;
     margin-left: 40%;
-    margin-top: 10%;
+    margin-top: 10%; */
 }
 
 #login button{
-    margin-top: 5px;
     background-color: rgb(203, 23, 23);
     border-color: rgb(203, 23, 23);
 }
 
 h1{
     color: rgb(203, 23, 23);
+}
+
+.test {
+    color: white;
 }
