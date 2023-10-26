@@ -4,3 +4,7 @@ export function inputInvalid(element) {
   });
 }
 
+export function checkByPattern(partternRegex, value){
+
+  return partternRegex.test(value)
+}
