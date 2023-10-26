@@ -12,31 +12,40 @@
 </head>
 <body>
     <div class="container">
-    <h1 style="font-family: 'Open Sans', sans-serif;">Signup</h1>
+    <h1 id="h1" style="font-family: 'Open Sans', sans-serif; padding-bottom: 25px;">Signup</h1>
+    <div id="notification"></div>
     <div class="row">
 
-        <form class="row g-3">
+        <form class="row g-3" onsubmit="event.preventDefault();">
             <div class="col-md-4">
-          <label for="validationDefault01" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="name" value="Mark" required>
+          <label  class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" required>
         </div>
         <div class="col-md-4">
-          <label for="validationDefault02" class="form-label">Apellidos</label>
-          <input type="text" class="form-control" id="surname" value="Otto" required>
+          <label  class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="surname" required>
         </div>
         <div class="col-md-4">
-          <label for="validationDefaultUsername" class="form-label">Nickname</label>
+          <label class="form-label">Nickname</label>
           <div class="input-group">
-              <span class="input-group-text" id="nickname">@</span>
-              <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+              <span class="input-group-text">@</span>
+              <input type="text" class="form-control" id="nickname" aria-describedby="inputGroupPrepend2" required>
             </div>
         </div>
         <div class="col-md-6">
-            <label for="validationDefault03" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required>
+            <label  class="form-label">Email</label>
+            <input type="email" class="form-control" id="password" required>
+        </div>
+        <div class="col-md-6">
+            <label  class="form-label">Password</label>
+            <input type="password" class="form-control" id="passwordConfirm" required>
+        </div>
+        <div class="col-md-6">
+            <label  class="form-label">Password confirm</label>
+            <input type="password" class="form-control" id="email" required>
         </div>
         <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
+            <button class="btn btn-primary" id="btn-submit">Sing up now!</button>
         </div>
     </form>
 </div>
