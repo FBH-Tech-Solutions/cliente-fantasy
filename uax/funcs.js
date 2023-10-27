@@ -24,3 +24,7 @@ export function sendNotification(message, type){
   document.insertBefore(divNot,newDiv)
 
 }
+
+export function checkEqualValues(value1, value2){
+  return value1==value2
+} 

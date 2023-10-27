@@ -1,6 +1,7 @@
 import { User } from "../uax/user.js";
 import { checkByPattern } from "../uax/funcs.js";
 import { sendNotification } from "../uax/funcs.js";
+import {checkEqualValues} from "../uax/funcs.js";
 
 // nick, name, surnames, email, pass
 let name = document.getElementById("name");
