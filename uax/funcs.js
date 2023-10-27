@@ -24,3 +24,15 @@ export function sendNotification(message, type){
   document.insertBefore(divNot,newDiv)
 
 }
+
+export function empty(num) {
+  var empty=false
+  if(num.length==0){
+      empty=true
+  }
+  return empty
+}
+
+export function cleanValue(value){
+  value=''
+}
