@@ -5,15 +5,10 @@ import { sendNotification } from "../uax/funcs.js";
 // nick, name, surnames, email, pass
 let name = document.getElementById("name");
 let surnames = document.getElementById("surname");
-
 let nick = document.getElementById("nickname");
-
 let email = document.getElementById("email");
-
 let pass = document.getElementById("password");
-
 let pass2 = document.getElementById("passwordConfirm");
-
 let btnSubmit = document.getElementById("btn-submit");
 let getUsers = localStorage.getItem("users");
 

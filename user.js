@@ -14,18 +14,18 @@ document.getElementById('submit').addEventListener("click", () => {
     const email = document.getElementById('email').value
     const password = document.getElementById('password').value
 
-    if (empty(email) && !checkByPattern(EXcheckEmail,email)) {
+    if (!empty(email) && !checkByPattern(EXcheckEmail,email)) {
         //El correo esta vacio o no esta bien el arroba
     }else{
         if (empty(password) && checkByPattern(EXcheckPassword,password)) {
             //La contraseña esta vacia o la contraseña es muy corta
         }else{
             if (password==pwd && email==correo) {
-                cleanValue(email)
-                cleanValue(password)
                 location.href='signup/index.html'
             }else{
                 //No ha podido iniciar sesion
+                cleanValue(email)
+                cleanValue(password)
             }
         }
     }

@@ -26,13 +26,10 @@ export function sendNotification(message, type){
 }
 
 export function empty(num) {
-  var empty=false
-  if(num.length==0){
-      empty=true
-  }
-  return empty
+  return num.length==0
 }
 
 export function cleanValue(value){
-  value=''
+  console.log(value)
+  return value=' '
 }
