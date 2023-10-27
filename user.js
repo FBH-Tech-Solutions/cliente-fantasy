@@ -1,34 +1,32 @@
-
 import { inputInvalid } from './uax/funcs.js';
 
-let email = document.getElementById("email")
-
-inputInvalid(email)
 var errores=[];
 
+var pwd='admin123';
+var correo='user@gmail.com'
 
-document.getElementById('submit').addEventListener("click", ()=>{
-    email=document.getElementById('email').value;
-    password=document.getElementById('password').value;
+document.getElementById('submit').addEventListener("click", () => {
+    const email = document.getElementById('email').value
+    const password = document.getElementById('password').value
 
-    if (empty(email)) {
-        errores.push('El correo está vacio <br>');
+    if(empty(email)){
+        errores.push('El correo está vacio')
     }else{
         if (!email.includes("@")||email.startsWith("@")) {
             errores.push('El correo necesita tener un @')
         }else{
             if (comprobarArroba(email)) {
                 
+            }
+            if(empty(password)&&comprobarContrasenia(password)){
+                errores.push('La contraseña está vacia')
             }else{
-                if (empty(password) && comprobarContrasenia(password)) {
-                    errores.push('La contraseña está vacia')
+                if(password==pwd && email==correo){
+                    console.log("Has iniciado sesion")
+                    clean()
+                    location.href='signup/index.html'
                 }else{
-                    if (password==pwd && email==correo) {
-                        clean
-                        window.location.href=''//Insertar el html de inicio
-                    }else{
-                        errores.push('No has podido iniciar sesion')
-                    }
+                    errores.push('No has podido iniciar sesion')
                 }
             }
         }
@@ -65,13 +63,5 @@ function empty(num) {
 function clean(){
     document.getElementById('email').value=' '
     document.getElementById('password').value=' '
-}
-
-function limpiarUsuario(){
-    document.getElementById('nombre').value=' '
-    document.getElementById('primerApellido').value=' '
-    document.getElementById('segundoApellido').value=' '
-    document.getElementById('dni').value=' '
-    document.getElementById('fecha').value=' '
 }
 
