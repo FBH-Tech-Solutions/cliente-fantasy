@@ -11,13 +11,13 @@ var pwd='admin123';
 var correo='user@gmail.com'
 
 document.getElementById('submit').addEventListener("click", () => {
-    const email = document.getElementById('email').value
-    const password = document.getElementById('password').value
+    var email = document.getElementById('email')
+    var password = document.getElementById('password')
 
-    if (!empty(email) && !checkByPattern(EXcheckEmail,email)) {
+    if (empty(email) && !checkByPattern(EXcheckEmail,email.value)) {
         //El correo esta vacio o no esta bien el arroba
     }else{
-        if (empty(password) && checkByPattern(EXcheckPassword,password)) {
+        if (empty(password) && checkByPattern(EXcheckPassword,password.value)) {
             //La contraseña esta vacia o la contraseña es muy corta
         }else{
             if (password==pwd && email==correo) {
@@ -26,6 +26,7 @@ document.getElementById('submit').addEventListener("click", () => {
                 //No ha podido iniciar sesion
                 cleanValue(email)
                 cleanValue(password)
+                console.log('hola')
             }
         }
     }

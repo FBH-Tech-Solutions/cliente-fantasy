@@ -29,7 +29,7 @@ export function empty(num) {
   return num.length==0
 }
 
-export function cleanValue(value){
-  console.log(value)
-  return value=' '
+export function cleanValue(element){
+  console.log(element.value)
+  return element.value=''
 }
