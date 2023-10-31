@@ -26,17 +26,7 @@ export function sendNotification(message, type) {
 export function checkEqualValues(value1, value2) {
   return value1 == value2;
 }
-export function empty(num) {
-  var empty = false;
-  if (num.length == 0) {
-    empty = true;
-  }
-  return empty;
-}
 
-export function cleanValue(value) {
-  value = "";
-}
 
 export function getLocalStorage(key){
    let local = localStorage.getItem(key)
@@ -47,4 +37,11 @@ export function setLocalStorate(key, setValue){
   var localParse = JSON.stringify(setValue)
   localStorage.setItem(key, localParse)
 }
+  export function empty(num) {
+  return num.length==0
+}
 
+export function cleanValue(element){
+  console.log(element.value)
+  return element.value=''
+}
