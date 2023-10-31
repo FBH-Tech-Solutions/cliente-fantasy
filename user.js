@@ -3,10 +3,7 @@ import { checkByPattern } from './uax/funcs.js';
 import { empty } from './uax/funcs.js';
 import { cleanValue } from './uax/funcs.js';
 
-var EXcheckEmail=/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 var EXcheckPassword=/^(?=.*[*#$.])(?!.*\s)[*#$.\w]{6,12}$/;
-
-
 var pwd='admin123';
 var correo='user@gmail.com'
 
@@ -26,7 +23,6 @@ document.getElementById('submit').addEventListener("click", () => {
                 //No ha podido iniciar sesion
                 cleanValue(email)
                 cleanValue(password)
-                console.log('hola')
             }
         }
     }
