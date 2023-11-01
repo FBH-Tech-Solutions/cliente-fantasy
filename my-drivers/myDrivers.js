@@ -1,4 +1,4 @@
-import { getLocalStorage } from "../uax/funcs.js";
+import { getLocalStorage, setLocalStorate } from "../uax/funcs.js";
 import { navbar } from "../uax/componentes.js";
 
 var img1=document.getElementById('img1')
@@ -8,12 +8,13 @@ var driver2=document.getElementById('driver2')
 var rol1=document.getElementById('rol1')
 var rol2=document.getElementById('rol2')
 var drivers=getLocalStorage('arrDrivers')
-var firstDriver=drivers[4]; //Se tiene que modificar esta parte para que obtengamos los pilotos del usuario
-var secondDriver=drivers[1];
+setLocalStorate('firstDriver',drivers[4])//Esto hay que borrarlo
+setLocalStorate('seconDriver',drivers[1]);
 var button=document.getElementById('submit')
 var optionDriver1=document.getElementById('optionDriver1')
 var optionDriver2=document.getElementById('optionDriver2')
-
+var firstDriver=getLocalStorage('firstDriver',drivers[4]) //Se tiene que modificar esta parte para que obtengamos los pilotos del usuario
+var secondDriver=getLocalStorage('seconDriver',drivers[1]);
 
 function loadDrivers(){
     if (drivers && drivers.length > 1) {
@@ -51,6 +52,7 @@ button.addEventListener('click', function(){
             //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
             console.log('Este ya es titular')
         }else{
+            console.log(firstDriver,secondDriver)
             changeData(firstDriver,secondDriver)
         }
     }else{
@@ -59,6 +61,7 @@ button.addEventListener('click', function(){
                 //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
                 console.log('Este ya es titular')
             }else{
+                console.log(firstDriver,secondDriver)
                 changeData(secondDriver,firstDriver)
             }
         }
