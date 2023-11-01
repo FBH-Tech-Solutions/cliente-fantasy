@@ -5,6 +5,7 @@ export class Driver{
         this.nacionality=nacionality;
         this.owner=owner;
         this.rol=rol;
+        this.points = 0;
         this.img=img;
     }
 }

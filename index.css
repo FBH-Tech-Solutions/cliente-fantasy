@@ -4,6 +4,21 @@ body{
     width: 100vw;
 }
 
+video {
+    filter: blur(7px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Asegúrate de que otros elementos estén encima del video */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
 
 #login{
 
