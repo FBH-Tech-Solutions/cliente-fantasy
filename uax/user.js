@@ -5,7 +5,7 @@ export class User {
     this.surnames = surnames;
     this.email = email;
     this.pass = pass;
-    this.online = online;
+    this.online = 0;
     this.myDrivers = [];
   }
 
