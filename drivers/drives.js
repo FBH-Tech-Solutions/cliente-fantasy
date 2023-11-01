@@ -1,6 +1,7 @@
 import { formProfile } from "../uax/componentes.js";
 import { navbar } from "../uax/componentes.js";
 import { Driver } from "../uax/driver.js";
+import { setLocalStorate } from "../uax/funcs.js";
 
 var drivers = [
     new Driver(1, "Alexander Albon", "Tailandés",2,"Titular", "/assets/drivers/alexander-albon.jpg"),
@@ -30,6 +31,6 @@ var drivers = [
 
 
 
-
+setLocalStorate('arrDrivers',drivers)
 navbar()
 formProfile()
