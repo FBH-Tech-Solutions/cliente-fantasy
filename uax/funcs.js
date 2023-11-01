@@ -20,7 +20,7 @@ export function sendNotification(message, type) {
 
   divNot.appendChild(newDiv);
 
-  document.insertBefore(divNot, newDiv);
+  // document.insertBefore(divNot, newDiv);
 }
 
 export function checkEqualValues(value1, value2) {
