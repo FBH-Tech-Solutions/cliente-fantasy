@@ -1,0 +1,10 @@
+img{
+    text-align: center;
+    width: 200px;
+    height: 400px;
+}
+ 
+.card{
+    text-align: center;
+    float: left;
+}
