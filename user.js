@@ -3,29 +3,26 @@ import { checkByPattern } from './uax/funcs.js';
 import { empty } from './uax/funcs.js';
 import { cleanValue } from './uax/funcs.js';
 
-var EXcheckEmail=/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 var EXcheckPassword=/^(?=.*[*#$.])(?!.*\s)[*#$.\w]{6,12}$/;
-
-
 var pwd='admin123';
 var correo='user@gmail.com'
 
 document.getElementById('submit').addEventListener("click", () => {
-    const email = document.getElementById('email').value
-    const password = document.getElementById('password').value
+    var email = document.getElementById('email')
+    var password = document.getElementById('password')
 
-    if (empty(email) && !checkByPattern(EXcheckEmail,email)) {
+    if (empty(email) && !checkByPattern(EXcheckEmail,email.value)) {
         //El correo esta vacio o no esta bien el arroba
     }else{
-        if (empty(password) && checkByPattern(EXcheckPassword,password)) {
+        if (empty(password) && checkByPattern(EXcheckPassword,password.value)) {
             //La contraseña esta vacia o la contraseña es muy corta
         }else{
             if (password==pwd && email==correo) {
-                cleanValue(email)
-                cleanValue(password)
                 location.href='signup/index.html'
             }else{
                 //No ha podido iniciar sesion
+                cleanValue(email)
+                cleanValue(password)
             }
         }
     }
