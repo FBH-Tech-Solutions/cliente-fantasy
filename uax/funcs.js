@@ -9,6 +9,7 @@ export function checkByPattern(partternRegex, value) {
 }
 
 export function sendNotification(message, type) {
+  
   let newDiv = document.createElement("div");
   let newP = document.createElement("p");
 
@@ -37,11 +38,19 @@ export function setLocalStorate(key, setValue){
   var localParse = JSON.stringify(setValue)
   localStorage.setItem(key, localParse)
 }
-  export function empty(num) {
+export function empty(num) {
   return num.length==0
 }
 
 export function cleanValue(element){
   console.log(element.value)
   return element.value=''
+}
+
+export function numChars(strValue){
+  return strValue.length
+}
+
+export function setValidationBootstrap(value, validation){
+  value.setAttribute("class", "form-control "+ validation)
 }
