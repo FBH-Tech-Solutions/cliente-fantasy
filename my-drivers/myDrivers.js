@@ -33,34 +33,25 @@ function loadDrivers(){
       } 
 }
 
-function changeDataDriver1(){
-    img1.src=secondDriver.img;
-    driver1.textContent=secondDriver.name;
-    rol1.textContent=secondDriver.rol;
+function changeData(d1,d2){
+    img1.src=d1.img;
+    driver1.textContent=d1.name;
+    rol1.textContent=d1.rol;
 
-    img2.src=firstDriver.img;
-    driver2.textContent=firstDriver.name;
-    rol2.textContent=firstDriver.rol;
-}
-
-function changeDataDriver2(){
-    img1.src=firstDriver.img;
-    driver1.textContent=firstDriver.name;
-    rol1.textContent=firstDriver.rol;
-
-    img2.src=secondDriver.img;
-    driver2.textContent=secondDriver.name;
-    rol2.textContent=secondDriver.rol;
+    img2.src=d2.img;
+    driver2.textContent=d2.name;
+    rol2.textContent=d2.rol;
 }
 
 button.addEventListener('click', function(){
     var selectedOption = document.getElementById("inputGroupSelect01").value;
+    
     if (selectedOption==='1') {
         if (driver1.textContent==firstDriver.name) {
             //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
             console.log('Este ya es titular')
         }else{
-            changeDataDriver2()
+            changeData(firstDriver,secondDriver)
         }
     }else{
         if (selectedOption==='2') {
@@ -68,7 +59,7 @@ button.addEventListener('click', function(){
                 //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
                 console.log('Este ya es titular')
             }else{
-                changeDataDriver1()
+                changeData(secondDriver,firstDriver)
             }
         }
     }
