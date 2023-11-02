@@ -1,5 +1,5 @@
-import { navbar } from "../uax/componentes.js";
-import { User } from "../uax/user.js";
+import { navbar } from "../utils/componentes.js";
+import { User } from "../utils/user.js";
 
 const users = [
     new User("Jose", "Alfredo","Alvarez", "user@gmail.com", "admin123", 30, 1, 30),

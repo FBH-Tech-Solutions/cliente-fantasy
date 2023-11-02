@@ -1,7 +1,7 @@
-import { inputInvalid } from './uax/funcs.js';
-import { checkByPattern } from './uax/funcs.js';
-import { empty } from './uax/funcs.js';
-import { cleanValue } from './uax/funcs.js';
+import { inputInvalid } from './utils/funcs.js';
+import { checkByPattern } from './utils/funcs.js';
+import { empty } from './utils/funcs.js';
+import { cleanValue } from './utils/funcs.js';
 
 var EXcheckPassword=/^(?=.*[*#$.])(?!.*\s)[*#$.\w]{6,12}$/;
 var pwd='admin123';

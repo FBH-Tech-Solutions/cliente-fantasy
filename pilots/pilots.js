@@ -1,7 +1,7 @@
-import { navbar } from "../uax/componentes.js";
-import { getLocalStorage } from "../uax/funcs.js";
-import { drivers } from "../uax/funcs.js";
-import { findUser } from "../uax/funcs.js";
+import { navbar } from "../utils/componentes.js";
+import { getLocalStorage } from "../utils/funcs.js";
+import { drivers } from "../utils/funcs.js";
+import { findUser } from "../utils/funcs.js";
 
 navbar();
 
@@ -23,7 +23,7 @@ function generateTable(arr) {
 
       if (key == "owner") {
         if (findUser(arr[i][key])) {
-          insertCell(arr[i][key], cell, row);
+            insertCell(arr[i][key], cell, row);
         } else {
           insertCell("Available", cell, row);
         }
