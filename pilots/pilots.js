@@ -9,7 +9,6 @@ let arr = drivers();
 
 generateTable(arr);
 
-
 function generateTable(arr) {
   const tbl = document.getElementById("table");
   const tblBody = document.getElementById("tbody");
@@ -42,7 +41,6 @@ function generateTable(arr) {
     tblBody.appendChild(row);
   }
   tbl.appendChild(tblBody);
-
 }
 
 function insertCell(value, cell, row) {

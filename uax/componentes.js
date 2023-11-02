@@ -1,7 +1,7 @@
-export function navbar(){
-    let newDiv= document.createElement("div")
+export function navbar() {
+  let newDiv = document.createElement("div");
 
-    newDiv.innerHTML=`<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  newDiv.innerHTML = `<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <!-- Container wrapper -->
     <div class="container-fluid">
       <!-- Toggle button -->
@@ -84,14 +84,14 @@ export function navbar(){
         </div>
       </div>
     </div>
-  </nav>`
+  </nav>`;
   document.body.appendChild(newDiv);
 }
 
-export function formProfile(){
-    let newProfile= document.createElement("div")
+export function formProfile() {
+  let newProfile = document.createElement("div");
 
-    newProfile.innerHTML=`<form class="row g-3">
+  newProfile.innerHTML = `<form class="row g-3">
     <div class="col-md-4">
   <label for="validationDefault01" class="form-label">Nombre</label>
   <input type="text" class="form-control" id="name" value="Mark" required>
@@ -114,6 +114,6 @@ export function formProfile(){
 <div class="col-12">
     <button class="btn btn-primary" type="submit">Submit form</button>
 </div>
-</form>`
-    document.body.appendChild(newProfile)
+</form>`;
+  document.body.appendChild(newProfile);
 }

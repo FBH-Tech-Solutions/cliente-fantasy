@@ -1,57 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">  
-    <link rel="Icon" href="/assets/iconF1.jpg">
-<title>signup | F1</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="Icon" href="/assets/iconF1.jpg" />
+    <title>signup | F1</title>
+  </head>
+  <body>
     <div class="container">
-    <h1 id="h1" style="font-family: 'Open Sans', sans-serif; padding-bottom: 25px;">Signup</h1>
-    <div id="notification"></div>
-    <div class="row">
-
+      <h1
+        id="h1"
+        style="font-family: 'Open Sans', sans-serif; padding-bottom: 25px"
+      >
+        Signup
+      </h1>
+      <div id="notification"></div>
+      <div class="row">
         <form class="row g-3" onsubmit="event.preventDefault();">
-            <div class="col-md-4">
-          <label  class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="name" required>
-        </div>
-        <div class="col-md-4">
-          <label  class="form-label">Apellidos</label>
-          <input type="text" class="form-control" id="surname" required>
-        </div>
-        <div class="col-md-4">
-          <label class="form-label">Nickname</label>
-          <div class="input-group">
-              <input type="text" class="form-control" id="nickname" aria-describedby="inputGroupPrepend2" required>
+          <div class="col-md-4">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="surname" required />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Nickname</label>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                id="nickname"
+                aria-describedby="inputGroupPrepend2"
+                required
+              />
             </div>
-        </div>
-        <div class="col-md-6">
-            <label  class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required>
-        </div>
-        <div class="col-md-6">
-            <label  class="form-label">Password</label>
-            <input type="password" class="form-control" id="passwordConfirm" required>
-        </div>
-        <div class="col-md-6">
-            <label  class="form-label">Password confirm</label>
-            <input type="password" class="form-control" id="password" required>
-        </div>
-        <div class="col-12">
-            <button class="btn btn-primary" id="btn-submit">Sing up now!</button>
-        </div>
-    </form>
-</div>
-
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="passwordConfirm"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Password confirm</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              required
+            />
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" id="btn-submit">
+              Sing up now!
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script type="module" src="signup.js"></script>
-</body>
+  </body>
 </html>
