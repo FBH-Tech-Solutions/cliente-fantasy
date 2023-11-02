@@ -1,4 +1,4 @@
-import { Driver } from "./driver.js";
+import { Driver } from "../classes/driver.js";
 
 export function inputInvalid(element) {
   element.addEventListener("blur", () => {

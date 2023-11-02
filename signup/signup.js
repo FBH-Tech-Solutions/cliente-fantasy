@@ -1,11 +1,11 @@
-import { User } from "../uax/user.js";
-import { checkByPattern } from "../uax/funcs.js";
-import { sendNotification } from "../uax/funcs.js";
-import { checkEqualValues } from "../uax/funcs.js";
-import { getLocalStorage } from "../uax/funcs.js";
-import { empty } from "../uax/funcs.js";
-import { numChars } from "../uax/funcs.js";
-import { setValidationBootstrap } from "../uax/funcs.js";
+import { User } from "../utils/user.js";
+import { checkByPattern } from "../utils/funcs.js";
+import { sendNotification } from "../utils/funcs.js";
+import { checkEqualValues } from "../utils/funcs.js";
+import { getLocalStorage } from "../utils/funcs.js";
+import { empty } from "../utils/funcs.js";
+import { numChars } from "../utils/funcs.js";
+import { setValidationBootstrap } from "../utils/funcs.js";
 
 let name = document.getElementById("name");
 let surnames = document.getElementById("surname");

@@ -1,7 +1,7 @@
-import { formProfile } from "../uax/componentes.js";
-import { navbar } from "../uax/componentes.js";
-import { Driver } from "../uax/driver.js";
-import { setLocalStorate } from "../uax/funcs.js";
+import { formProfile } from "../utils/componentes.js";
+import { navbar } from "../utils/componentes.js";
+import { Driver } from "../classes/driver.js";
+import { setLocalStorate } from "../utils/funcs.js";
 
 var drivers = [
     new Driver(1, "Alexander Albon", "Tailandés",2,"Titular", "/assets/drivers/alexander-albon.jpg"),
