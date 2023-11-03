@@ -235,3 +235,15 @@ export function findUser(nickname) {
     }
   }
 }
+
+export function foundLoged(){
+  let users=getLocalStorage("users")
+
+  let i = 0;
+    while (i < users.length) {
+      if (users[i].online == 1) {
+        return users[i];
+      }
+      i++;
+    }
+}

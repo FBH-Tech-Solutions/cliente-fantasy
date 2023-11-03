@@ -13,67 +13,45 @@
   </head>
   <body>
     <div class="container">
-      <h1
-        id="h1"
-        style="font-family: 'Open Sans', sans-serif; padding-bottom: 25px"
-      >
-        My Profile
-      </h1>
+      <h1 id="h1" style="font-family: 'Open Sans', sans-serif; padding-bottom: 25px">My Profile</h1>
       <div id="notification"></div>
       <div class="row">
         <form class="row g-3" onsubmit="event.preventDefault();">
-          <div class="col-md-6">
+          <div class="col-md-2">
             <label class="form-label">Name</label>
             <input type="text" class="form-control" id="name" required />
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <label class="form-label">Surnames</label>
             <input type="text" class="form-control" id="surname" required />
-          </div><br>
-          <div class="col-md-4">
-            <label class="form-label">Nickname</label>
-            <div class="input-group">
-              <input
-                type="text"
-                class="form-control"
-                id="nickname"
-                aria-describedby="inputGroupPrepend2"
-                required
-                disabled
-              />
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-2">
+              <label class="form-label">Nickname</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="nickname" aria-describedby="inputGroupPrepend2" required disabled />
+              </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" required />
+          <div class="col-md-12">
+            <div class="col-md-4">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-3">
             <label class="form-label">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="passwordConfirm"
-              required
-            />
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">New Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="password"
-              size="4"
-              required
-            />
+            <input type="password" class="form-control" id="password" required />
           </div>
           <div class="col-12">
-            <button class="btn btn-primary" id="btn-submit">
-              Sing up now!
-            </button>
+            <button class="btn btn-primary" id="btn-submit" id="saveChange">Save Changes</button>
+            <button class="btn btn-primary" id="btn-submit" id="changePassword">Change Password</button>
           </div>
         </form>
       </div>
     </div>
+    
+    
 
     <script type="module" src="./profile.js"></script>
   </body>
