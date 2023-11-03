@@ -1,4 +1,4 @@
-import { User } from "../utils/user.js";
+import { User } from "../classes/user.js";
 import { checkByPattern } from "../utils/funcs.js";
 import { sendNotification } from "../utils/funcs.js";
 import { checkEqualValues } from "../utils/funcs.js";
