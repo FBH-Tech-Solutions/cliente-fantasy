@@ -1,4 +1,4 @@
-import { getLocalStorage, inputInvalid, sendNotification } from './utils/funcs.js';
+import { getLocalStorage, inputInvalid, sendNotification, setValidationBootstrap } from './utils/funcs.js';
 import { checkByPattern } from './utils/funcs.js';
 import { empty } from './utils/funcs.js';
 import { cleanValue } from './utils/funcs.js';
@@ -15,15 +15,19 @@ document.getElementById("submit").addEventListener("click", () => {
     if (empty(email) || !checkByPattern(EXcheckEmail, email)) {
       // El correo está vacío o no cumple con el patrón
       sendNotification("Email is empty or not well formed", "alert alert-danger")
+      setValidationBootstrap(document.getElementById("email"), "is-invalid")
     } else if (empty(password.value) || checkByPattern(EXcheckPassword, password.value)) {
       // La contraseña está vacía o no cumple con el patrón
       sendNotification("Password is empty or not well formed", "alert alert-danger")
+      setValidationBootstrap(document.getElementById("password"), "is-invalid")
       cleanValue(password);
     } else if (email == user.email && password.value == user.pass) {
       location.href = "signup/index.html";
       // Las credenciales coinciden, redirige a la página de inicio de sesión.
     } else {
       // Las credenciales no coinciden, realiza alguna acción como mostrar un mensaje de error.
+      setValidationBootstrap(document.getElementById("email"), "is-invalid")
+      setValidationBootstrap(document.getElementById("password"), "is-invalid")
       cleanValue(password);
     }
   }
