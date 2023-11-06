@@ -5,7 +5,17 @@ import { findUser } from "../utils/funcs.js";
 
 navbar();
 
-let arr = drivers();
+let arr = null
+
+
+//Check empty localStorage of drivers
+if(getLocalStorage("drivers")){
+
+  arr = getLocalStorage("drivers")
+}else{
+  arr = drivers()
+}
+
 
 generateTable(arr);
 
