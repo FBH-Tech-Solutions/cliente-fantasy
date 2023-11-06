@@ -1,4 +1,5 @@
 import { Driver } from "../classes/driver.js";
+import { User } from "../classes/user.js";
 
 export function inputInvalid(element) {
   element.addEventListener("blur", () => {
@@ -230,6 +231,20 @@ export function findUser(nickname) {
     while (i < arrUsers.length) {
       if (arrUsers[i].nick == nickname) {
         return arrUsers[i].nick;
+      }
+      i++;
+    }
+  }
+}
+
+export function findUserFromEmail(email){
+  let arrUsers = getLocalStorage("users");
+
+  if (arrUsers) {
+    let i = 0;
+    while (i < arrUsers.length) {
+      if (arrUsers[i].email == email) {
+        return new User(arrUsers[i].nick,arrUsers[i].name,arrUsers[i].surname,arrUsers[i].email,arrUsers[i].pass,arrUsers[i].points,arrUsers[i].online,arrUsers[i].myDrivers);
       }
       i++;
     }
