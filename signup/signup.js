@@ -1,4 +1,4 @@
-import { User } from "../utils/user.js";
+import { User } from "../classes/user.js";
 import { checkByPattern } from "../utils/funcs.js";
 import { sendNotification } from "../utils/funcs.js";
 import { checkEqualValues } from "../utils/funcs.js";
@@ -27,7 +27,6 @@ btnSubmit.addEventListener("click", function () {
 
   let arrChecked = checkEmptyValues(name, surnames, nick, email, pass, pass2);
   if (arrChecked[0] < 6) {
-    if (users) {
       if (findUser(users, nick.value)) {
         sendNotification("Nickname is used", "alert alert-danger");
       } else {
@@ -71,9 +70,6 @@ btnSubmit.addEventListener("click", function () {
           );
         }
       }
-    } else {
-      sendNotification("User created!", "alert alert-success");
-    }
   } else {
     sendNotification(
       listEmpty(arrChecked, "Values Empty"),
@@ -96,7 +92,7 @@ function getUserLocal() {
 
 function saveUserLocal() {
   let arrUsers = [];
-
+  
   if (localStorage.getItem("users")) {
     arrUsers = JSON.parse(localStorage.getItem("users"));
   }
