@@ -96,7 +96,6 @@ function saveUserLocal() {
   if (localStorage.getItem("users")) {
     arrUsers = JSON.parse(localStorage.getItem("users"));
   }
-
   let user = new User(
     nick.value,
     name.value,

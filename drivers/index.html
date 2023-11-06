@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index.css">
-    <title>My Profile</title>
-    <link rel="Icon" href="/assets/iconF1.jpg">
-</head>
-<body>
-    
-<script type="module" src="./drives.js"></script></body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pilots</title>
+  </head>
+  <body>
+    <table id="table" class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Nationality</th>
+          <th scope="col">Owner</th>
+          <th scope="col">Rol</th>
+          <th scope="col">Points</th>
+          <th scope="col">Image</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <script type="module" src="./pilots.js"></script>
+  </body>
 </html>
