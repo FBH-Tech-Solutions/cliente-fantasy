@@ -253,11 +253,10 @@ export function findUserFromEmail(email){
 
 export function foundLoged(){
   let users=getLocalStorage("users")
-
   let i = 0;
-    while (i < users.length) {
-      if (users[i].online == 1) {
-        return users[i];
+  while (i < users.length) {
+    if (users[i].online == 1) {
+        return new User(users[i].nick,users[i].name,users[i].surnames,users[i].email,users[i].pass,users[i].points,users[i].online,users[i].myDrivers);
       }
       i++;
     }

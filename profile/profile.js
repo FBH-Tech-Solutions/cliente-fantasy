@@ -1,72 +1,86 @@
 import { navbar } from "../utils/componentes.js";
-import { empty, foundLoged, sendNotification,setValidationBootstrap } from "../utils/funcs.js";
+import { empty, findUserFromEmail, foundLoged, sendNotification,setValidationBootstrap } from "../utils/funcs.js";
 
 var buttonSave=document.getElementById('saveChange')
 var buttonChange=document.getElementById('changePassword')
 var name=document.getElementById('name');
 var surname=document.getElementById('surname')
-var nick=document.getElementById('nick')
+var nick=document.getElementById('nickname')
 var email=document.getElementById('email')
 var password=document.getElementById('password')
+let formSave = document.getElementById("formSave")
+let formChange=document.getElementById("formChange")
 let patterName = /^[a-zA-Z]{2,20}$/;
 let patterSurName = /^[a-zA-Z]{2,30}$/;
 let patternMail = /^[\w-\.]+@([\w-\.]{3,15})+[\w-]{2,8}$/;
 let patternPass = /^[a-zA-Z0-9\-.*#$]{6,10}$/;
+var user=foundLoged()
 
-function loadData(){
-  var user=foundLoged()
-  name.value=user.name
-  surname.value=user.surname
-  nick.value=user.nick
-  email.value=user.email
-}
+formSave.addEventListener('input', function(){
+  buttonSave.removeAttribute("disabled", true)
+  buttonSave.addEventListener('click',function(){
+      var users=localStorage.getItem("users")
+      var checkEmpty=checkEmptyValues(name,surname,email)
+      if (checkEmpty[0]<5) {
+          if (users) {
+              if (findUserFromEmail(users,email.value)) {
+                  sendNotification("This email is used","aler alert-danger")
+              }else{
+                  var checkPattern=checkPatternValues(patterName,patterSurName,patternMail,name,surname,email)
+                  if (checkPattern[0]<5) {
+                    saveData()
+                    sendNotification("Edited User!", "alert alert-success");
+                    console.log(users)
+                  }else {
+                      arrCh[1].forEach((element) => {
+                        setValidationBootstrap(
+                          document.getElementById(element),
+                          "is-invalid"
+                        );
+                      });
+                      arrCh[2].forEach((element) => {
+                        setValidationBootstrap(
+                          document.getElementById(element),
+                          "is-valid"
+                        );
+                      });
+            
+                      sendNotification(
+                        listEmpty(arrCh, "Review the following errors"),
+                        "alert alert-danger"
+                      );
+                  }
+              }
+          }
+      }else {
+          sendNotification(
+            listEmpty(arrChecked, "Values Empty"),
+            "alert alert-danger"
+          );
+          arrChecked[0].forEach((element) => {
+            setValidationBootstrap(document.getElementById(element), "is-invalid");
+          });
+      }
+  })
+})
 
-buttonSave.addEventListener('click',function(){
-    var users=getUserLocal()
-    var checkEmpty=checkEmptyValues(name,surname,email,password)
-    if (checkEmpty[0]<5) {
-        if (users) {
-            if (findUser(users,nick.nick)) {
-                sendNotification("This email is used","aler alert-danger")
-            }else{
-                var checkPattern=checkPatternValues(patterName,patterSurName,patternMail,patternPass,name,surname,email,password)
-                if (checkPattern[0]<5) {
-        
-                }else {
-                    arrCh[1].forEach((element) => {
-                      setValidationBootstrap(
-                        document.getElementById(element),
-                        "is-invalid"
-                      );
-                    });
-                    arrCh[2].forEach((element) => {
-                      setValidationBootstrap(
-                        document.getElementById(element),
-                        "is-valid"
-                      );
-                    });
-          
-                    sendNotification(
-                      listEmpty(arrCh, "Review the following errors"),
-                      "alert alert-danger"
-                    );
-                }
-            }
-        }
-    }else {
-        sendNotification(
-          listEmpty(arrChecked, "Values Empty"),
-          "alert alert-danger"
-        );
-        arrChecked[0].forEach((element) => {
-          setValidationBootstrap(document.getElementById(element), "is-invalid");
-        });
+formChange.addEventListener('input',function(){
+  buttonChange.removeAttribute("disabled", true)
+})
+
+  buttonChange.addEventListener('click', function(){
+    if(empty(password.value)&&patternPass.test(password.value)){
+      console.log("Contraseña está vacia")
+    }else{
+      if (password.value==user.pass) {
+        console.log("La contrasenia es la misma")
+      }else{
+        saveChange()
+        sendNotification("Edited Password!", "alert alert-success");
+      }
     }
-})
+  })
 
-buttonChange.addEventListener('click', function(){
-    
-})
 
 function checkEmptyValues(name, surnames, email) {
     let arrValues = [name, surnames, email];
@@ -87,34 +101,6 @@ function checkEmptyValues(name, surnames, email) {
     let rtnArr = [emptyValues, notEmptyValues];
   
     return rtnArr;
-  }
-  
-  function getUserLocal() {
-    let users = getLocalStorage("users");
-    if (users != null) {
-      return users;
-    } else {
-      return false;
-    }
-  }
-
-  function findUser(arrUsers, nick) {
-    let i = 0;
-    let aux = 0;
-    let exit = true;
-    while (i < arrUsers.length && exit) {
-      if (arrUsers[i].nick == nick) {
-        exit = false;
-        aux = i;
-      }
-      i++;
-    }
-  
-    if (!exit) {
-      return arrUsers[aux];
-    } else {
-      return false;
-    }
   }
 
   function checkPatternValues(
@@ -174,6 +160,48 @@ function checkEmptyValues(name, surnames, email) {
     }
     rtnList += "</ul>";
     return rtnList;
+  }
+
+  function loadData(){
+    var users=JSON.parse(localStorage.getItem("users"))
+    for (let i = 0; i < users.length; i++) {
+      if (user.nick==users[i].nick) {
+        name.value=user.name
+        surname.value=user.surnames
+        nick.value=user.nick
+        email.value=user.email
+      }
+    }
+  }
+
+  function saveData(){
+    if (localStorage.getItem("users")) {
+      var users=JSON.parse(localStorage.getItem("users"))
+    }
+  
+    for (let i = 0; i < users.length; i++) {
+      if (user.nick==users[i].nick) {
+        users[i].name=name.value
+        users[i].surnames=surname.value
+        users[i].email=email.value
+        var stringUsers=JSON.stringify(users)
+        localStorage.setItem("users",stringUsers)
+      }
+    }
+  }
+
+  function saveChange(){
+    if (localStorage.getItem("users")) {
+      var users=JSON.parse(localStorage.getItem("users"))
+    }
+  
+    for (let i = 0; i < users.length; i++) {
+      if (user.nick==users[i].nick) {
+        users[i].pass=password.value
+        var stringUsers=JSON.stringify(users)
+        localStorage.setItem("users",stringUsers)
+      }
+    }
   }
 
 loadData()
