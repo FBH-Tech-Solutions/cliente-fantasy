@@ -28,7 +28,6 @@ btnSubmit.addEventListener("click", function () {
 
   let arrChecked = checkEmptyValues(name, surnames, nick, email, pass, pass2);
   if (arrChecked[0] < 6) {
-    if (users) {
       if (findUser(users, nick.value)) {
         sendNotification("Nickname is used", "alert alert-danger");
       } else {
@@ -52,9 +51,6 @@ btnSubmit.addEventListener("click", function () {
           sendNotification(listEmpty(arrCh, "Review the following errors"), "alert alert-danger");
         }
       }
-    } else {
-      sendNotification("User created!", "alert alert-success");
-    }
   } else {
     sendNotification(listEmpty(arrChecked, "Values Empty"), "alert alert-danger");
     arrChecked[0].forEach(element => {
@@ -78,7 +74,6 @@ function saveUserLocal() {
   if (localStorage.getItem("users")) {
     arrUsers = JSON.parse(localStorage.getItem("users"));
   }
-
   let user = new User(
     nick.value,
     name.value,
