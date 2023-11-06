@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
     <title>My Profile</title>
-    <link rel="Icon" href="/assets/iconF1.jpg">
-</head>
-<body>
+    <link rel="Icon" href="/assets/iconF1.jpg" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="h1" style="font-family: 'Open Sans', sans-serif; padding-bottom: 25px">My Profile</h1>
+      <div id="notification"></div>
+      <div class="row">
+        <form class="row g-3" onsubmit="event.preventDefault();">
+          <div class="col-md-2">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Surnames</label>
+            <input type="text" class="form-control" id="surname" required />
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-2">
+              <label class="form-label">Nickname</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="nickname" aria-describedby="inputGroupPrepend2" required disabled />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="col-md-4">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required />
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" id="btn-submit" id="saveChange">Save Changes</button>
+            <button class="btn btn-primary" id="btn-submit" id="changePassword">Change Password</button>
+          </div>
+        </form>
+      </div>
+    </div>
     
+    
+
     <script type="module" src="./profile.js"></script>
-</body>
+  </body>
 </html>
