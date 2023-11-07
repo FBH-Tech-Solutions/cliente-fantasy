@@ -40,6 +40,7 @@ function generateTable(arr) {
         if (key == "img") {
           let image = document.createElement("img");
           image.src = arr[i][key];
+          image.setAttribute("class", "shadow-lg rounded")
           cell.appendChild(image);
           row.appendChild(cell);
         } else {
