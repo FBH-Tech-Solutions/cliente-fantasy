@@ -1,0 +1,33 @@
+h1 {  
+    font-size: 72px;  
+    background: -webkit-linear-gradient(left top, rgb(249, 29, 0), rgb(21, 21, 30));
+    background: linear-gradient(to bottom right, rgb(249, 29, 0), rgb(21, 21, 30));
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 5px;  
+  }
+
+  body{
+    background-color: #262626;
+
+}
+
+  #profile{
+    background-color: #262626;
+    padding: 20px;
+    margin-right: 5%;
+    margin-top: 12%;
+    margin-left: 30%;
+}
+
+#profile button{
+    background-color: rgb(249, 29, 0);
+    border-color: rgb(249, 29, 0);
+    text-align: center;
+    padding: 10px;
+
+}
+
+label{
+    color: white;
+}
