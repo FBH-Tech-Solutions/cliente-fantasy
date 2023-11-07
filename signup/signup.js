@@ -1,5 +1,5 @@
 import { User } from "../classes/user.js";
-import { checkByPattern } from "../utils/funcs.js";
+import { checkByPattern, drivers, getRandomInt } from "../utils/funcs.js";
 import { sendNotification } from "../utils/funcs.js";
 import { checkEqualValues } from "../utils/funcs.js";
 import { getLocalStorage } from "../utils/funcs.js";
@@ -21,6 +21,9 @@ let patterSurName = /^[a-zA-Z]{2,30}$/;
 let patternMail = /^[\w-\.]+@([\w-\.]{3,15})+[\w-]{2,8}$/;
 let patterNickName = /^[\w-\.]{4,10}$/;
 let patternPass = /^[a-zA-Z0-9\-.*#$]{6,10}$/;
+
+var arrayDrivers=drivers()
+var driversAvailable=drivers()
 
 btnSubmit.addEventListener("click", function () {
   let users = getUserLocal();
@@ -92,6 +95,10 @@ function getUserLocal() {
 
 function saveUserLocal() {
   let arrUsers = [];
+  var driversArray=addDrivers()
+  var points=0
+  var online=0
+  console.log(driversArray)
   
   if (localStorage.getItem("users")) {
     arrUsers = JSON.parse(localStorage.getItem("users"));
@@ -101,7 +108,10 @@ function saveUserLocal() {
     name.value,
     surnames.value,
     email.value,
-    pass.value
+    pass.value,
+    points,
+    online,
+    driversArray
   );
 
   console.log(user);
@@ -131,6 +141,32 @@ function findUser(arrUsers, nickname) {
 
 function createUser() {
   saveUserLocal();
+}
+
+function addDrivers(){
+  var drivers=[];
+  for (let i = 0; i < 2; i++) {
+    var rand=getRandomInt(driversAvailable.length)
+    if (driversAvailable[rand]!=null) {
+      if (i==0) {
+        arrayDrivers[rand].rol="Main"
+        driversAvailable[rand].rol="Main"
+        driversAvailable[rand].owner=name.value
+      }
+      if (i==1) {
+        arrayDrivers[rand].rol="Substitute"
+        driversAvailable[rand].rol="Substitute"
+        driversAvailable[rand].owner=name.value
+      }
+      drivers.push(driversAvailable[rand])
+        delete(driversAvailable[rand])
+        arrayDrivers[rand].owner=name.value
+      
+    }
+  }
+  var arrayDriversStr=JSON.stringify(arrayDrivers)
+  localStorage.setItem("drivers",arrayDriversStr)
+  return drivers;
 }
 
 function checkEmptyValues(name, surnames, nick, email, pass, pass2) {

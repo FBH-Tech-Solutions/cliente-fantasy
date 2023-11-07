@@ -1,5 +1,5 @@
 import { navbar } from "../utils/componentes.js";
-import { User } from "../utils/user.js";
+import { User } from "../classes/user.js";
 
 const users = [
     new User("Badr", "Alfredo","Alvarez", "user@gmail.com", "admin123", 60, 1, 30),
@@ -14,8 +14,9 @@ function loadRanking(){
         const user = users[i];
         const nick = document.getElementById(`nick${i + 1}`);
         const score = document.getElementById(`score${i + 1}`);
+        
         nick.textContent = user.nick;
-        score.textContent = user.points;
+        score.textContent = user.sumPoints();
     }
 }
 

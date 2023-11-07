@@ -62,160 +62,160 @@ export function drivers() {
       1,
       "Alexander Albon",
       "Tailandés",
-      "test",
-      "Titular",
+      "None",
+      "Available",
       "/assets/drivers/alexander-albon.jpg"
     ),
     new Driver(
       2,
       "Carlos Sainz",
       "Español",
-      "badr",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/carlos-sainz.jpg"
     ),
     new Driver(
       3,
       "Charles Leclerc",
       "Monegasco",
-      "test2",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/charles-leclerc.jpg"
     ),
     new Driver(
       4,
       "Esteban Ocon",
       "Francés",
-      "badr",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/esteban-ocon.jpg"
     ),
     new Driver(
       5,
       "Fernando Alonso",
       "Español",
-      "badr",
-      "Titular",
+      "None",
+      "Available",
       "../assets/drivers/fernando-alonso.jpg"
     ),
     new Driver(
       6,
       "George Russell",
       "Británico",
-      "test",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/george-russell.jpg"
     ),
     new Driver(
       7,
       "Guanyu Zhou",
       "Chino",
-      "test",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/guanyu-zhou.jpg"
     ),
     new Driver(
       8,
       "Kevin Magnussen",
       "Dinamarqués",
-      "",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/kevin-magnussen.jpg"
     ),
     new Driver(
       9,
       "Lance Stroll",
       "Canadiense",
-      "test",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/lance-stroll.jpg"
     ),
     new Driver(
       10,
       "Lando Norris",
       "Británico",
-      "test",
-      "Suplente",
+      "None",
+      "Available",
       "../assets/drivers/lando-norris.jpg"
     ),
     new Driver(
       11,
       "Lewis Hamilton",
       "Británico",
-      "test",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/lewis-hamilton.jpg"
     ),
     new Driver(
       12,
       "Logan Sargeant",
       "Estadounidense",
-      "test",
-      "Titular",
+      "None",
+      "Available",
       "../assets/drivers/logan-sargeant.jpg"
     ),
     new Driver(
       13,
       "Max Verstappen",
       "Neerlandés",
-      "",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/max-verstappen.jpg"
     ),
     new Driver(
       14,
       "Nico Hulkenberg",
       "Alemán",
-      "test",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/nico-hulkenberg.jpg"
     ),
     new Driver(
       15,
       "Nyck de Vries",
       "Neerlandés",
-      "test",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/nyck-de-vries.jpg"
     ),
     new Driver(
       16,
       "Oscar Piastri",
       "Australiano",
-      "test",
-      "Suplente",
+      "None",
+      "Available",
       "../assets/drivers/oscar-piastri.jpg"
     ),
     new Driver(
       17,
       "Pierre Gasly",
       "Francés",
-      "",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/pierre-gasly.jpg"
     ),
     new Driver(
       18,
       "Sergio Perez",
       "Mexicano",
-      "test",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/sergio-perez.jpg"
     ),
     new Driver(
       19,
       "Valtteri Bottas",
       "Finlandés",
-      "test",
-      "Suplente",
+      "None",
+      "Available",
       "../assets/drivers/valtteri-bottas.jpg"
     ),
     new Driver(
       20,
       "Yuki Tsunoda",
       "Japonés",
-      "test",
-      "Libre",
+      "None",
+      "Available",
       "../assets/drivers/yuki-tsunoda.jpg"
     ),
   ];
