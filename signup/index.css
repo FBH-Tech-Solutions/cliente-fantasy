@@ -1,0 +1,47 @@
+#title{
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+body{
+    background-image: url(../assets/f1_coche.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+
+video {
+    filter: blur(7px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+h1 {  
+    font-size: 72px;  
+    background: -webkit-linear-gradient(left top, rgb(249, 29, 0), rgb(21, 21, 30));
+    background: linear-gradient(to bottom right, rgb(249, 29, 0), rgb(21, 21, 30));
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 5px;  
+  }
+
+#signup{
+    background-color: #262626;
+    padding: 20px;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+#signup button{
+    background-color: rgb(249, 29, 0);
+    border-color: rgb(249, 29, 0);
+    text-align: center;
+    padding: 10px;
+
+}
+
+label{
+    color: white;
+}

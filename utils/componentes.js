@@ -85,7 +85,9 @@ export function navbar() {
       </div>
     </div>
   </nav>`;
-  document.body.appendChild(newDiv);
+  let test = document.getElementById("test")
+  test.appendChild(newDiv)
+  // document.body.insertBefore(test, newDiv);
 }
 
 export function formProfile() {
