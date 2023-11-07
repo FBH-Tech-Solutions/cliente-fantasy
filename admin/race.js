@@ -1,8 +1,11 @@
 import { Race } from "../classes/ClassRace.js";
-import { races } from "../utils/default.js"
+import { newsDefault, races } from "../utils/default.js"
 import { navbar } from "../utils/componentes.js"
 import { setLocalStorate, getLocalStorage, drivers, sendNotification } from "../utils/funcs.js";
 import { getRandomInt } from "../utils/funcs.js"
+import { New } from "../classes/ClassNews.js";
+import CanvasConfetti from 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/+esm';
+
 
 
 let cardImage = document.getElementById("cardImage")
@@ -18,6 +21,7 @@ btnLaunch.addEventListener('click', function(){
     let arrDrivers = null
     let i = 0
     let arrNum = new Array
+    let aux = 0
     
     //Check empty localStorage of drivers
     if(getLocalStorage("drivers")){
@@ -34,6 +38,7 @@ btnLaunch.addEventListener('click', function(){
         if(arrNum[rand] == null){
             if(i == 0){
                 arrDrivers[rand].points += 25
+                aux = rand
             }else if(i == 1){
                 arrDrivers[rand].points += 18
         }else if ( i == 2 ){
@@ -68,12 +73,14 @@ if(getLocalStorage("races")){
 let j = 0
 
 let check = true
+let aux2 = 0
 while(j<race.length && check){
     
     if(!race[j].isActive){
         race[j].isActive = true
+        aux2 = j
         check = false
-        console.log(race[j])
+
     }
     
     j++
@@ -81,6 +88,40 @@ while(j<race.length && check){
 
 
 setLocalStorate("races", race)
+
+
+
+let addNew = new New(arrDrivers[aux].img, "The winner of "+race[aux2].name, arrDrivers[aux].name)
+
+let news = getLocalStorage("news")
+if(news != null){
+   
+    news.push(addNew)
+    setLocalStorate("news", news) 
+}else{
+    news = newsDefault
+    news.push(addNew)
+    setLocalStorate("news",news) 
+
+}
+
+const progressBar = document.getElementById("myProgressBar");
+
+function startProgress() {
+  progressBar.style.width = "100%";
+}
+
+setTimeout(startProgress, 0); // Inicia el progreso después de 0 segundos
+
+setTimeout(() => {
+
+    CanvasConfetti()
+    CanvasConfetti()
+    CanvasConfetti()
+
+
+CanvasConfetti()
+}, 9000); 
 
 })
 
@@ -114,4 +155,3 @@ if (check) {
     sendNotification("No more races","alert alert-danger")
     card.remove()
 }
-
