@@ -5,7 +5,17 @@ import { findUser } from "../utils/funcs.js";
 
 navbar();
 
-let arr = drivers();
+let arr = null
+
+
+//Check empty localStorage of drivers
+if(getLocalStorage("drivers")){
+
+  arr = getLocalStorage("drivers")
+}else{
+  arr = drivers()
+}
+
 
 generateTable(arr);
 
@@ -30,6 +40,7 @@ function generateTable(arr) {
         if (key == "img") {
           let image = document.createElement("img");
           image.src = arr[i][key];
+          image.setAttribute("class", "shadow-lg rounded")
           cell.appendChild(image);
           row.appendChild(cell);
         } else {
