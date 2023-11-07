@@ -5,46 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Drivers</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <link rel="Icon" href="/assets/iconF1.jpg">
+    <link rel="icon" href="/assets/iconF1.jpg">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
 </head>
 <body>
-    <h1>My Drivers</h1>
     <div class="container text-center">
-        <div class="card" style="width: 18rem;">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <img src="../assets/noImage.jpg" class="card-img-top" alt="..." id="img1">
+        <h1>My Drivers</h1>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="card mb-3">
+                    <img src="../assets/noImage.jpg" class="card-img-top" alt="Driver 1 Image" id="img1">
                     <div class="card-body">
-                    <h5 class="card-title" id="driver1">Name driver</h5>
-                    <p class="card-text" id="rol1">Rol</p>
+                        <h5 class="card-title" id="driver1">Name driver</h5>
+                        <p class="card-text" id="rol1">Role</p>
                     </div>
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <img src="../assets/noImage.jpg" class="card-img-top" alt="..." id="img2">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="card mb-3">
+                    <img src="../assets/noImage.jpg" class="card-img-top" alt="Driver 2 Image" id="img2">
                     <div class="card-body">
-                    <h5 class="card-title" id="driver2">Name driver</h5>
-                    <p class="card-text" id="rol2">Rol</p>
-                    </div>  
+                        <h5 class="card-title" id="driver2">Name driver</h5>
+                        <p class="card-text" id="rol2">Role</p>
+                    </div>
                 </div>
             </div>
-    </div>
-    <div class="input-group mb-3">
-        <select class="form-select" id="inputGroupSelect01">
-          <option value="1" id="optionDriver1">Driver 1</option>
-          <option value="2" id="optionDriver2">Driver 2</option>
-        </select>
-      </div>
-    <button id="submit" class="btn btn-primary mx-auto d-block" type="submit">Change Main Driver</button>
-    
-    
+        </div>
+        
+        <div class="input-group mb-3 d-flex justify-content-center" style="width: 300px;">
+            <select class="form-select" id="inputGroupSelect01" >
+                <option value="1" id="optionDriver1">Driver 1</option>
+                <option value="2" id="optionDriver2">Driver 2</option>
+            </select>
+        </div>
+        <button id="submit" class="btn btn-primary" type="submit">Change Main Driver</button>
+</div>
+
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-      <script type="module" src="myDrivers.js"></script></body>
+    <script type="module" src="myDrivers.js"></script>
 </body>
 </html>
