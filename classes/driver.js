@@ -8,4 +8,7 @@ export class Driver {
     this.points = 0;
     this.img = img;
   }
+  setPoints(value){
+    this.points = value
+  }
 }
