@@ -151,14 +151,17 @@ function addDrivers(){
       if (i==0) {
         arrayDrivers[rand].rol="Main"
         driversAvailable[rand].rol="Main"
+        driversAvailable[rand].owner=name.value
       }
       if (i==1) {
         arrayDrivers[rand].rol="Substitute"
         driversAvailable[rand].rol="Substitute"
+        driversAvailable[rand].owner=name.value
       }
       drivers.push(driversAvailable[rand])
         delete(driversAvailable[rand])
         arrayDrivers[rand].owner=name.value
+      
     }
   }
   var arrayDriversStr=JSON.stringify(arrayDrivers)

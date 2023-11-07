@@ -16,7 +16,7 @@ var drivers = getLocalStorage("drivers");
 function loadDrivers() {
   if (user) {
     if (drivers && drivers.length > 1) {
-      if (user.myDrivers[0].rol=="Titular") {
+      if (user.myDrivers[0].rol=="Main") {
         img1.src = user.myDrivers[0].img;
         driver1.textContent = user.myDrivers[0].name;
         rol1.textContent = user.myDrivers[0].rol;
@@ -25,7 +25,7 @@ function loadDrivers() {
         driver2.textContent = user.myDrivers[0].name;
         rol2.textContent = user.myDrivers[0].rol;
       }
-      if (user.myDrivers[1].rol=="Titular") {
+      if (user.myDrivers[1].rol=="Main") {
         img1.src = user.myDrivers[1].img;
         driver1.textContent = user.myDrivers[1].name;
         rol1.textContent = user.myDrivers[1].rol;
@@ -51,12 +51,12 @@ function loadDrivers() {
 function changeData(d1, d2) {
       img1.src = d1.img;
       driver1.textContent = d1.name;
-      d1.rol = "Titular";
+      d1.rol = "Main";
       rol1.textContent = d1.rol;
 
       img2.src = d2.img;
       driver2.textContent = d2.name;
-      d2.rol = "Suplente";
+      d2.rol = "Substitute";
       rol2.textContent = d2.rol;
 }
 
@@ -72,7 +72,7 @@ button.addEventListener("click", function () {
       if (selectedOption === "1") {
         if (driver1.textContent == users[i].myDrivers[0].name) {
           //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
-          console.log("Este ya es titular");
+          console.log("This is main");
         } else {
           changeData(users[i].myDrivers[0], users[i].myDrivers[1]);
           console.log(users[i].myDrivers[0], users[i].myDrivers[1])
@@ -82,7 +82,7 @@ button.addEventListener("click", function () {
           if (driver2.textContent == users[i].myDrivers[0].name) {
 
             //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
-            console.log("Este ya es titular");
+            console.log("This is main");
           } else {
             changeData(users[i].myDrivers[1], users[i].myDrivers[0]);
           }
