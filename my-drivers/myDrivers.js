@@ -74,13 +74,11 @@ button.addEventListener("click", function () {
           //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
           console.log("Este ya es titular");
         } else {
-          console.log('hola')
           changeData(users[i].myDrivers[0], users[i].myDrivers[1]);
           console.log(users[i].myDrivers[0], users[i].myDrivers[1])
         }
       } else {
         if (selectedOption === "2") {
-          console.log(users[i].myDrivers[0])
           if (driver2.textContent == users[i].myDrivers[0].name) {
 
             //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
