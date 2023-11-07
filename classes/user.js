@@ -1,5 +1,5 @@
 export class User {
-  constructor(nick, name, surnames, email, pass, points,online) {
+  constructor(nick, name, surnames, email, pass, points,online,myDrivers) {
     this.nick = nick;
     this.name = name;
     this.surnames = surnames;
@@ -7,7 +7,7 @@ export class User {
     this.pass = pass;
     this.points = points;
     this.online = online;
-    this.myDrivers = [];
+    this.myDrivers = myDrivers;
   }
 
   login() {
@@ -23,5 +23,12 @@ export class User {
 
   deleteDriver(index) {
     this.myDrivers.splice(index, 1);
+  }
+
+  sumPoints() {
+    var driver1=this.myDrivers[0].points
+    var driver2=this.myDrivers[1].points
+    
+    return driver1+driver2
   }
 }
