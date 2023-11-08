@@ -1,4 +1,4 @@
-import { navbar } from "../utils/componentes.js";
+import { footer, navbar } from "../utils/componentes.js";
 import { empty, findUserFromEmail, foundLoged, sendNotification,setValidationBootstrap } from "../utils/funcs.js";
 
 navbar(foundLoged().nick);
@@ -208,3 +208,4 @@ function checkEmptyValues(name, surnames, email) {
 
 loadData()
 navbar()
+footer()

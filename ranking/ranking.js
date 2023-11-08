@@ -1,4 +1,4 @@
-import { navbar } from "../utils/componentes.js";
+import { footer, navbar } from "../utils/componentes.js";
 import { User } from "../classes/user.js";
 import { foundLoged, getLocalStorage, sendNotification } from "../utils/funcs.js";
 
@@ -42,3 +42,4 @@ function loadRanking(){
 }
 
 loadRanking();
+footer()

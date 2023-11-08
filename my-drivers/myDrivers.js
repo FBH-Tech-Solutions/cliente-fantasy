@@ -1,5 +1,5 @@
 import { foundLoged, getLocalStorage, setLocalStorate } from "../utils/funcs.js";
-import { navbar } from "../utils/componentes.js";
+import { footer, navbar } from "../utils/componentes.js";
 
 navbar(foundLoged().nick);
 
@@ -95,4 +95,6 @@ button.addEventListener("click", function () {
     }
   }
 });
+
+footer()
 loadDrivers();
