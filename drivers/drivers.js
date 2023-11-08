@@ -1,9 +1,9 @@
 import { navbar } from "../utils/componentes.js";
-import { getLocalStorage } from "../utils/funcs.js";
+import { foundLoged, getLocalStorage } from "../utils/funcs.js";
 import { drivers } from "../utils/funcs.js";
 import { findUser } from "../utils/funcs.js";
 
-navbar();
+navbar(foundLoged().nick);
 
 let arr = null
 

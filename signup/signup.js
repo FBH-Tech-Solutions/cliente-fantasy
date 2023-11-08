@@ -50,6 +50,9 @@ btnSubmit.addEventListener("click", function () {
           if (pass.value == pass2.value) {
             saveUserLocal();
             sendNotification("User created!", "alert alert-success");
+            setTimeout(function(){
+              window.location.href = "/"
+            },5000)
           } else {
             sendNotification("Password does not match", "alert alert-danger");
           }
@@ -114,10 +117,10 @@ function saveUserLocal() {
     driversArray
   );
 
-  console.log(user);
   arrUsers.push(user);
   let stringArr = JSON.stringify(arrUsers);
   localStorage.setItem("users", stringArr);
+  
 }
 
 function findUser(arrUsers, nickname) {
@@ -137,10 +140,6 @@ function findUser(arrUsers, nickname) {
   } else {
     return false;
   }
-}
-
-function createUser() {
-  saveUserLocal();
 }
 
 function addDrivers(){

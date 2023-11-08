@@ -1,6 +1,8 @@
 import { foundLoged, getLocalStorage, setLocalStorate } from "../utils/funcs.js";
 import { navbar } from "../utils/componentes.js";
 
+navbar(foundLoged().nick);
+
 var img1 = document.getElementById("img1");
 var img2 = document.getElementById("img2");
 var driver1 = document.getElementById("driver1");
@@ -93,6 +95,4 @@ button.addEventListener("click", function () {
     }
   }
 });
-
-navbar();
 loadDrivers();

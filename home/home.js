@@ -1,8 +1,8 @@
 import { navbar } from "../utils/componentes.js";
 import { newsDefault } from "../utils/default.js"; 
-import { getLocalStorage } from "../utils/funcs.js";
+import { foundLoged, getLocalStorage } from "../utils/funcs.js";
 
-navbar()
+navbar(foundLoged().nick);
 
 let news = getLocalStorage("news")
 

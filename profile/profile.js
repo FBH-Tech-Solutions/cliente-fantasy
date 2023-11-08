@@ -1,6 +1,8 @@
 import { navbar } from "../utils/componentes.js";
 import { empty, findUserFromEmail, foundLoged, sendNotification,setValidationBootstrap } from "../utils/funcs.js";
 
+navbar(foundLoged().nick);
+
 var buttonSave=document.getElementById('saveChange')
 var buttonChange=document.getElementById('changePassword')
 var name=document.getElementById('name');
