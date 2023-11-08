@@ -12,16 +12,21 @@ export function checkByPattern(partternRegex, value) {
 }
 
 export function sendNotification(message, type) {
-  let newDiv = document.createElement("div");
-  let newP = document.createElement("p");
-
+  let notification = document.getElementById("notification");
+  
+  let getNoti = document.getElementById("noti")
+  
+  let newP = null
+  
+  if(!getNoti){
+    newP = document.createElement("p");
+    newP.setAttribute("id", "noti")
+  }else{
+    newP = getNoti
+  }
+  notification.setAttribute("class", type);
+  notification.appendChild(newP);
   newP.innerHTML = message;
-  newDiv.setAttribute("class", type);
-  newDiv.appendChild(newP);
-
-  let divNot = document.getElementById("notification");
-
-  divNot.appendChild(newDiv);
 
   // document.insertBefore(divNot, newDiv);
 }
