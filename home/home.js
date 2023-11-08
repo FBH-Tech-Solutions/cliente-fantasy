@@ -1,8 +1,9 @@
-import { navbar } from "../utils/componentes.js";
+import { footer, navbar } from "../utils/componentes.js";
 import { newsDefault } from "../utils/default.js"; 
 import { getLocalStorage } from "../utils/funcs.js";
 
 navbar()
+footer()
 
 let news = getLocalStorage("news")
 
