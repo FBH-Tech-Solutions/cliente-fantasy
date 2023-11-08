@@ -1,4 +1,4 @@
-import { navbar } from "../utils/componentes.js";
+import { footer, navbar } from "../utils/componentes.js";
 import { User } from "../classes/user.js";
 import { getLocalStorage } from "../utils/funcs.js";
 
@@ -37,3 +37,4 @@ function loadRanking(){
 
 loadRanking();
 navbar()
+footer()

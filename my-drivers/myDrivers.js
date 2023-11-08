@@ -1,5 +1,5 @@
 import { foundLoged, getLocalStorage, setLocalStorate } from "../utils/funcs.js";
-import { navbar } from "../utils/componentes.js";
+import { footer, navbar } from "../utils/componentes.js";
 
 var img1 = document.getElementById("img1");
 var img2 = document.getElementById("img2");
@@ -95,4 +95,5 @@ button.addEventListener("click", function () {
 });
 
 navbar();
+footer()
 loadDrivers();

@@ -68,3 +68,33 @@ export function formProfile() {
 </form>`;
   document.body.appendChild(newProfile);
 }
+
+export function footer(){
+	let newFooter=document.createElement("div");
+
+	newFooter.innerHTML=`<div class="container">
+	<div class="row">
+	  <div class="col-md-4">
+		<ul>
+		  <li style="display: inline-block;"><a href="https://twitter.com/home"><img class="rounded" src="../assets/icons/x.jpeg" alt="" style="width: 25px;"></a></li>
+		  <li style="display: inline-block;"><a href="https://www.instagram.com/"><img class="rounded" src="../assets/icons/insta.png" alt="" style="width: 25px;"></a></li>
+		  <li style="display: inline-block;"><a href="https://discord.com/"><img class="rounded" src="../assets/icons/facebook.png" alt="" style="width: 25px;"></a></li> 
+		</ul>
+	  </div>
+	  <div class="col-md-4 text-center">
+		<p>Owners: Badrelddin Hamidou El Aadli and Francisco Álvarez Bellón</p>
+	  </div>
+	  <div class="col-md-4 text-right">
+		<div id="cookies-alert" style="float: right; margin-right: 15px;">
+		  <a href="/politica-de-cookies">Cookie Policy</a> | <a href="/politica-de-privacidad">Privacy Policy</a>
+		</div>
+	  </div>
+	</div>
+	<div class="text-center p-3">
+	  © 2023 Copyright: Fantasy F1
+	</div>
+  </div>`
+
+  let footer = document.getElementById("footer")
+  footer.appendChild(newFooter)
+}
