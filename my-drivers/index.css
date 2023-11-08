@@ -3,8 +3,55 @@ img{
     width: 200px;
     height: 400px;
 }
+
+body{
+    background-image: url(../assets/garage.jpg);
+    background-size: cover;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background-color: black;
+    border: 0;
+}
  
 .card{
     text-align: center;
     float: left;
 }
+
+.row{
+    margin-left: 16%;   
+}
+
+.card{
+    border-color: #262626;
+}
+
+.card-body{
+    background-color: #262626;
+    color: white;
+}
+
+.input-group{
+    margin-left: 38%;
+}
+
+#inputGroupSelect01 {
+    background-color: #848484;
+    border-color: #848484;
+}
+
+#submit{
+    background-color: rgb(249, 29, 0);
+    border-color: rgb(249, 29, 0);
+}
+
+h1 {  
+    font-size: 50px;  
+    background: -webkit-linear-gradient(left top, rgb(249, 29, 0), rgb(21, 21, 30));
+    background: linear-gradient(to bottom right, rgb(249, 29, 0), rgb(21, 21, 30));
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 5px;  
+  }

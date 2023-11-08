@@ -1,23 +1,32 @@
 h1 {  
-    font-size: 72px;  
-    background: -webkit-linear-gradient(left top, rgb(249, 29, 0), rgb(21, 21, 30));
-    background: linear-gradient(to bottom right, rgb(249, 29, 0), rgb(21, 21, 30));
-    -webkit-background-clip: text;  
-    -webkit-text-fill-color: transparent;
-    padding-bottom: 5px;  
-  }
+  font-size: 72px;  
+  background: -webkit-linear-gradient(left top, rgb(249, 29, 0), rgb(21, 21, 30));
+  background: linear-gradient(to bottom right, rgb(249, 29, 0), rgb(21, 21, 30));
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 5px;  
+  margin-left: 20%;
+}
 
   body{
-    background-color: #262626;
+    background-image: url(../assets/pit_stop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background-color: black;
+    border: 0;
+}
 
+img{
+  filter: blur(7px);
 }
 
   #profile{
     background-color: #262626;
     padding: 20px;
-    margin-right: 5%;
-    margin-top: 12%;
-    margin-left: 30%;
+    margin-top: 13%;
+    margin-left: 5%;
 }
 
 #profile button{
@@ -30,4 +39,8 @@ h1 {
 
 label{
     color: white;
+}
+
+p{
+  color: white;
 }
