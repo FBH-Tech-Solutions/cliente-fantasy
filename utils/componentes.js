@@ -13,7 +13,7 @@ export function navbar() {
 	          <div class="collapse navbar-collapse" id="navbarNavDropdown">
 	            <ul class="navbar-nav mx-auto">
 	              <li class="nav-item">
-	                <a class="nav-link mx-2 active" aria-current="page" href="/home">Home</a>
+	                <a class="nav-link mx-2" aria-current="page" href="/home">Home</a>
 	              </li>
 	              <li class="nav-item">
 	                <a class="nav-link mx-2" href="/drivers">Drivers</a>
