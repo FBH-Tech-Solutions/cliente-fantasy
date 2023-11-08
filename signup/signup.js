@@ -18,7 +18,7 @@ let btnSubmit = document.getElementById("btn-submit");
 //patterns
 let patterName = /^[a-zA-Z]{2,20}$/;
 let patterSurName = /^[a-zA-Z]{2,30}$/;
-let patternMail = /^[\w-\.]+@([\w-\.]{3,15})+[\w-]{2,8}$/;
+let patternMail = /^[\w-\.]+@([\w-]+\.)+[a-z]{3,4}$/;
 let patterNickName = /^[\w-\.]{4,10}$/;
 let patternPass = /^[a-zA-Z0-9\-.*#$]{6,10}$/;
 
@@ -243,7 +243,7 @@ function checkPatternValues(
     "The name must be between 2 and 20 characters",
     "The surname must be between 2 and 30 characters",
     'The nickname must be between 4 and 10 characters and only special characters like "_" ',
-    "The email does not meet the requirements to be an email",
+    "The email does not meet the requirements to be an email <br> example: username@foo.tld",
     "The password must be at least 6 to 12 characters long and may contain the following special characters: *,#,$",
     "The password must be at least 6 to 12 characters long and may contain the following special characters: *,#,$",
   ];
