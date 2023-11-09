@@ -284,6 +284,7 @@ export function foundLoged() {
         users[i].online,
         users[i].myDrivers
       );
+      
     }
     i++;
   }
@@ -306,6 +307,7 @@ export function logoutUser(user) {
         i++;
       }
       setLocalStorate("users", users);
+      window.location.href = "/"
     });
   }
 }

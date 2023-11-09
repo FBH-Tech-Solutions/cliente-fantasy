@@ -4,6 +4,7 @@ import { drivers } from "../utils/funcs.js";
 import { findUser } from "../utils/funcs.js";
 
 navbar(foundLoged());
+console.log(foundLoged)
 
 let arr = null
 

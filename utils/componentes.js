@@ -3,7 +3,7 @@ import { findUser, findUserFromEmail, getLocalStorage, logoutUser, setLocalStora
 
 export function navbar(user) {
   let newDiv = document.createElement("div");
-
+	console.log(user)
   newDiv.innerHTML = `    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container">
 	<a class="navbar-brand py-3" href="/home">
