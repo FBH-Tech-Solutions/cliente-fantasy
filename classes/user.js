@@ -26,10 +26,10 @@ export class User {
   }
 
   sumPoints() {
-    console.log(this.myDrivers)
+
     var driver1=this.myDrivers[0].points
     var driver2=this.myDrivers[1].points
     
-    return driver1+driver2
+    this.points =  driver1+driver2
   }
 }

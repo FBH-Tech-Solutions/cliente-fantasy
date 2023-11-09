@@ -249,6 +249,7 @@ export function getRandomInt(max) {
 export function findUserFromEmail(email) {
   let arrUsers = getLocalStorage("users");
 
+  console.log(arrUsers)
   if (arrUsers) {
     let i = 0;
     while (i < arrUsers.length) {
@@ -256,7 +257,7 @@ export function findUserFromEmail(email) {
         return new User(
           arrUsers[i].nick,
           arrUsers[i].name,
-          arrUsers[i].surname,
+          arrUsers[i].surnames,
           arrUsers[i].email,
           arrUsers[i].pass,
           arrUsers[i].points,
