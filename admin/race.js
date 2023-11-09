@@ -18,11 +18,14 @@ let cardtext = document.getElementById("cardText");
 let card = document.getElementById("card");
 let btnLaunch = document.getElementById("btn-launch");
 let progresBar = document.getElementById("progress-bar");
+let progres = document.getElementById("progress");
+
 
 navbar(foundLoged());
 footer();
 
 btnLaunch.addEventListener("click", function () {
+    progres.removeAttribute("hidden")
   let arrDrivers = null;
   let i = 0;
   let arrNum = new Array();
@@ -80,30 +83,39 @@ btnLaunch.addEventListener("click", function () {
   let y = 0;
 
   console.log(aux);
-
-  let aux1 = aux[0];
-  aux[0] = aux[1];
-  aux[1] = aux1;
+    let aux1 = aux[0];
+    aux[0] = aux[1];
+    aux[1] = aux1;
 
   console.log(aux);
+  console.log(k)
+  if(k==110){
 
-  while (y < aux.length) {
-    let imgDriver = document.getElementById("car-drivers");
+      while (y < aux.length) {
+          // card.removeAttribute("style")
+          let imgDriver = document.getElementById("car-drivers");
     // aux[y].sumPoints()
+    let test = "m-5"
+    let size = "12rem"
+    if(y==1){
+        test = "m-1"
+        size="15rem"
+    }
     imgDriver.innerHTML += `
-    <div class="card m-3" style="width: 12rem;">
+    <div class="card ${test}" style="width: ${size};">
     <img src="${aux[y].img}" class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title">${aux[y].name}</h5>
-      <p class="card-text">Points: ${aux[y].points}</p>
+    <h5 class="card-title">${aux[y].name}</h5>
+    <p class="card-text">Points: ${aux[y].points}</p>
     </div>
-  </div>
+    </div>
     `;
     cardImage.setAttribute("src", aux[y].img);
     cardtitle.textContent = aux[y].name;
-
+    
     y++;
-  }
+}
+}
 
   let race = null;
 
