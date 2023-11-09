@@ -1,5 +1,5 @@
 import { User } from "../classes/user.js";
-import { checkByPattern, drivers, getRandomInt } from "../utils/funcs.js";
+import { checkByPattern, drivers, getRandomInt, setLocalStorate } from "../utils/funcs.js";
 import { sendNotification } from "../utils/funcs.js";
 import { checkEqualValues } from "../utils/funcs.js";
 import { getLocalStorage } from "../utils/funcs.js";
@@ -24,6 +24,8 @@ let patternPass = /^[a-zA-Z0-9\-.*#$]{6,10}$/;
 
 var arrayDrivers=drivers()
 var driversAvailable=drivers()
+
+addBots()
 
 btnSubmit.addEventListener("click", function () {
   let users = getUserLocal();
@@ -290,4 +292,45 @@ function listEmpty(arrList, titleErrorMsg) {
   }
   rtnList += "</ul>";
   return rtnList;
+}
+
+function addBots() {
+  var bots=getLocalStorage("bots")
+  var users=getLocalStorage("users")
+  if (bots==null) {
+    var arrayBots=[]
+    var user1 = new User("SpeedRacer", "Jack", "Johnson", "jack@email.com", "pass123", 0, 0);
+    var user3 = new User("TurboChamp", "Alex", "Anderson", "alex@email.com", "topSecret", 0, 0);
+    var user2 = new User("SwiftRunner", "Emily", "Evans", "emily@email.com", "securePass", 0, 0);
+    var user5 = new User("VelocityPro", "Ryan", "Roberts", "ryan@email.com", "racing123", 0, 0);
+    var user4 = new User("GearMaster", "Sophia", "Smith", "sophia@email.com", "p@ssw0rd", 0, 0);
+    var user7 = new User("TrackStar", "Mason", "Miller", "mason@email.com", "speedster", 0, 0);
+    var user6 = new User("NitroRider", "Olivia", "Owens", "olivia@email.com", "nitroPower", 0, 0);
+    var user9 = new User("FlashDriver", "Ethan", "Edwards", "ethan@email.com", "quick123", 0, 0);
+    var user8 = new User("RaceQueen", "Lily", "Lewis", "lily@email.com", "fastLane", 0, 0);
+    var user10 = new User("TurboKid", "Ava", "Adams", "ava@email.com", "turboKid", 0, 0);
+    
+    var bot = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10];
+    
+    while (arrayBots.length<2) {
+
+      var botRandom = Math.floor(Math.random() * bot.length);
+      console.log(botRandom)
+      var driversArray=addDrivers()
+
+      if (users==null) {
+        users=[]
+      }
+
+      var newBot= new User(bot[botRandom].nick,bot[botRandom].name,bot[botRandom].surnames,bot[botRandom].email,bot[botRandom].pass,bot[botRandom].points,bot[botRandom].online,driversArray)
+      console.log(newBot)
+      arrayBots.push(newBot)
+      users.push(newBot)
+      setLocalStorate("users",users)
+      console.log(arrayBots)
+      let stringArr = JSON.stringify(arrayBots);
+      localStorage.setItem("bots", stringArr);
+    }
+  }else{
+  }
 }
