@@ -25,7 +25,7 @@ document.getElementById("submit").addEventListener("click", () => {
       console.log(user)
       user.login()
       changeLogin(user)
-      location.href = "my-drivers/index.html";
+      location.href = "./home/index.html";
       // Las credenciales coinciden, redirige a la página de inicio de sesión.
     } else {
       // Las credenciales no coinciden, realiza alguna acción como mostrar un mensaje de error.
