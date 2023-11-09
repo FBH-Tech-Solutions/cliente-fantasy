@@ -12,15 +12,17 @@ body{
 .card{
     text-align: center;
     float: left;
+    border-color: #262626;
+    margin-right: 15%;
 }
 
 .driverss{
     margin-left: 32%;   
 }
 
-.card{
-    border-color: #262626;
-    margin-right: 15%;
+.card img{
+    height: 250px;
+    
 }
 
 .card-body{
