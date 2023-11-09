@@ -1,4 +1,7 @@
-export function navbar(nickname) {
+import { User } from "../classes/user.js";
+import { findUser, findUserFromEmail, getLocalStorage, logoutUser, setLocalStorate } from "./funcs.js";
+
+export function navbar(user) {
   let newDiv = document.createElement("div");
 
   newDiv.innerHTML = `    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -29,20 +32,22 @@ export function navbar(nickname) {
 		</li>
 		<li class="nav-item dropdown">
 		  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-			${nickname}
+			${user.nick}
 		  </a>
 		  <ul class="dropdown-menu dropdown-menu-dark">
 			<li><a class="dropdown-item" href="/profile">My profile</a></li>
-			<li><a class="dropdown-item btn btn-danger" href="/">Logout</a></li>
+			<li><a class="dropdown-item btn btn-danger" id="logout">Logout</a></li>
 		  </ul>
 		</li>
 
 	  </ul>
 	</div>
   </div>
-</nav>`;
-  let navbar = document.getElementById("navbar")
-  navbar.appendChild(newDiv)
+</nav>`
+
+let navbar = document.getElementById("navbar")
+navbar.appendChild(newDiv)
+logoutUser(user)
 
 }
 

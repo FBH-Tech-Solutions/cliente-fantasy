@@ -3,7 +3,7 @@ import { foundLoged, getLocalStorage } from "../utils/funcs.js";
 import { drivers } from "../utils/funcs.js";
 import { findUser } from "../utils/funcs.js";
 
-navbar(foundLoged().nick);
+navbar(foundLoged());
 
 let arr = null
 

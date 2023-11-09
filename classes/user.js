@@ -11,10 +11,10 @@ export class User {
   }
 
   login() {
-    this.login = 1;
+    this.online = 1;
   }
   logout() {
-    this.login = 0;
+    this.online = 0;
   }
 
   setDriver(index, idDriver) {

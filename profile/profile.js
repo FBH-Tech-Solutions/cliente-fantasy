@@ -1,7 +1,7 @@
 import { footer, navbar } from "../utils/componentes.js";
 import { empty, findUserFromEmail, foundLoged, sendNotification,setValidationBootstrap } from "../utils/funcs.js";
 
-navbar(foundLoged().nick);
+navbar(foundLoged());
 
 var buttonSave=document.getElementById('saveChange')
 var buttonChange=document.getElementById('changePassword')
@@ -207,5 +207,4 @@ function checkEmptyValues(name, surnames, email) {
   }
 
 loadData()
-navbar()
 footer()

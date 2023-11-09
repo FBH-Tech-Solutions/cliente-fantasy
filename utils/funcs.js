@@ -13,16 +13,16 @@ export function checkByPattern(partternRegex, value) {
 
 export function sendNotification(message, type) {
   let notification = document.getElementById("notification");
-  
-  let getNoti = document.getElementById("noti")
-  
-  let newP = null
-  
-  if(!getNoti){
+
+  let getNoti = document.getElementById("noti");
+
+  let newP = null;
+
+  if (!getNoti) {
     newP = document.createElement("p");
-    newP.setAttribute("id", "noti")
-  }else{
-    newP = getNoti
+    newP.setAttribute("id", "noti");
+  } else {
+    newP = getNoti;
   }
   notification.setAttribute("class", type);
   notification.appendChild(newP);
@@ -240,34 +240,72 @@ export function findUser(nickname) {
       i++;
     }
   }
-
 }
 
 export function getRandomInt(max) {
-   return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * max);
 }
 
-export function findUserFromEmail(email){
+export function findUserFromEmail(email) {
   let arrUsers = getLocalStorage("users");
 
   if (arrUsers) {
     let i = 0;
     while (i < arrUsers.length) {
       if (arrUsers[i].email == email) {
-        return new User(arrUsers[i].nick,arrUsers[i].name,arrUsers[i].surname,arrUsers[i].email,arrUsers[i].pass,arrUsers[i].points,arrUsers[i].online,arrUsers[i].myDrivers);
+        return new User(
+          arrUsers[i].nick,
+          arrUsers[i].name,
+          arrUsers[i].surname,
+          arrUsers[i].email,
+          arrUsers[i].pass,
+          arrUsers[i].points,
+          arrUsers[i].online,
+          arrUsers[i].myDrivers
+        );
       }
       i++;
     }
   }
 }
 
-export function foundLoged(){
-  let users=getLocalStorage("users")
+export function foundLoged() {
+  let users = getLocalStorage("users");
   let i = 0;
   while (i < users.length) {
     if (users[i].online == 1) {
-        return new User(users[i].nick,users[i].name,users[i].surnames,users[i].email,users[i].pass,users[i].points,users[i].online,users[i].myDrivers);
-      }
-      i++;
+      return new User(
+        users[i].nick,
+        users[i].name,
+        users[i].surnames,
+        users[i].email,
+        users[i].pass,
+        users[i].points,
+        users[i].online,
+        users[i].myDrivers
+      );
     }
+    i++;
+  }
+}
+
+export function logoutUser(user) {
+  let btnlogout = document.getElementById("logout");
+  if (btnlogout) {
+    btnlogout.addEventListener("click", function () {
+      let users = getLocalStorage("users");
+      user.logout();
+
+      let i = 0;
+      let check = true;
+      while (i < users.length && check) {
+        if (users[i].nick == user.nick) {
+          users[i] = user;
+          check = false;
+        }
+        i++;
+      }
+      setLocalStorate("users", users);
+    });
+  }
 }

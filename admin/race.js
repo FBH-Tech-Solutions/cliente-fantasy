@@ -1,7 +1,7 @@
 import { Race } from "../classes/ClassRace.js";
 import { newsDefault, races } from "../utils/default.js"
 import { footer, navbar } from "../utils/componentes.js"
-import { setLocalStorate, getLocalStorage, drivers, sendNotification } from "../utils/funcs.js";
+import { setLocalStorate, getLocalStorage, drivers, sendNotification, foundLoged } from "../utils/funcs.js";
 import { getRandomInt } from "../utils/funcs.js"
 import { New } from "../classes/ClassNews.js";
 import CanvasConfetti from 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/+esm';
@@ -14,7 +14,7 @@ let cardtext = document.getElementById("cardText")
 let card = document.getElementById("card")
 let btnLaunch = document.getElementById("btn-launch")
 
-navbar()
+navbar(foundLoged())
 footer()
 
 btnLaunch.addEventListener('click', function(){

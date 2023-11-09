@@ -1,4 +1,4 @@
-import { findUser, findUserFromEmail, getLocalStorage, inputInvalid, sendNotification, setValidationBootstrap } from './utils/funcs.js';
+import { findUser, findUserFromEmail, getLocalStorage, inputInvalid, sendNotification, setLocalStorate, setValidationBootstrap } from './utils/funcs.js';
 import { checkByPattern } from './utils/funcs.js';
 import { empty } from './utils/funcs.js';
 import { cleanValue } from './utils/funcs.js';
@@ -22,7 +22,7 @@ document.getElementById("submit").addEventListener("click", () => {
       setValidationBootstrap(document.getElementById("password"), "is-invalid")
       cleanValue(password);
     } else if (email == user.email && password.value == user.pass) {
-      console.log(user)
+
       user.login()
       changeLogin(user)
       location.href = "my-drivers/index.html";
@@ -36,16 +36,19 @@ document.getElementById("submit").addEventListener("click", () => {
 });
 
 function changeLogin(user){
-  if (localStorage.getItem("users")) {
-    var users=JSON.parse(localStorage.getItem("users"))
-  }
+  var users=getLocalStorage("users")
 
-  for (let i = 0; i < users.length; i++) {
-    if (user.email==users[i].email) {
-      users[i].online=1
-      var stringUsers=JSON.stringify(users)
-      localStorage.setItem("users",stringUsers)
+  let i = 0
+  let check = true
+  user.login()
+  while(i<users.length && check){
+    if (users[i].nick == user.nick) {
+      users[i] = user
+        check =  false
     }
+    i++
   }
+  setLocalStorate("users",users)
+
 }
 

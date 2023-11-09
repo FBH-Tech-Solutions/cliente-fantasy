@@ -1,7 +1,7 @@
-import { foundLoged, getLocalStorage, setLocalStorate } from "../utils/funcs.js";
+import { foundLoged, getLocalStorage, logoutUser, setLocalStorate } from "../utils/funcs.js";
 import { footer, navbar } from "../utils/componentes.js";
+navbar(foundLoged());
 
-navbar(foundLoged().nick);
 
 var img1 = document.getElementById("img1");
 var img2 = document.getElementById("img2");

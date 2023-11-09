@@ -2,7 +2,7 @@ import { footer, navbar } from "../utils/componentes.js";
 import { User } from "../classes/user.js";
 import { foundLoged, getLocalStorage, sendNotification } from "../utils/funcs.js";
 
-navbar(foundLoged().nick);
+navbar(foundLoged());
 
 
 var users=getLocalStorage("users")
