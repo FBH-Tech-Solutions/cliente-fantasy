@@ -4,11 +4,11 @@ import { findUser, findUserFromEmail, getLocalStorage, logoutUser, setLocalStora
 export function navbar(user) {
   let newDiv = document.createElement("div");
 	console.log(user)
-  newDiv.innerHTML = `    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <div class="container">
-	<a class="navbar-brand py-3" href="/home">
-	  <img src="/assets/logoFormula1.png" height="40" alt="Company Logo">
-	</a>
+  newDiv.innerHTML = `    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-lg">
+  <a class="navbar-brand py-3" href="/home">
+	<img src="/assets/logoFormula1.png" height="40" alt="Company Logo">
+  </a>
+  <div class="">
 	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
 	</button>
@@ -16,7 +16,7 @@ export function navbar(user) {
 	<div class="collapse navbar-collapse" id="navbarNavDropdown">
 	  <ul class="navbar-nav mx-auto">
 		<li class="nav-item">
-		  <a class="nav-link mx-2 active" aria-current="page" href="/home">Home</a>
+		  <a class="nav-link mx-2 " aria-current="page" href="/home">Home</a>
 		</li>
 		<li class="nav-item">
 		  <a class="nav-link mx-2" href="/drivers">Drivers</a>

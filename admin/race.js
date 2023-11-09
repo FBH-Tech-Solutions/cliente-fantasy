@@ -13,6 +13,18 @@ let cardtitle = document.getElementById("cardTitle")
 let cardtext = document.getElementById("cardText")
 let card = document.getElementById("card")
 let btnLaunch = document.getElementById("btn-launch")
+let progresBar = document.getElementById("progress-bar")
+
+let j = 0
+while(j<100){
+    setTimeout((j)=>{
+        console.log(j)
+            progresBar.style.width=`${j}%`
+        }
+        ,1000)
+
+    j = j + 10
+}
 
 navbar(foundLoged())
 footer()

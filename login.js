@@ -3,7 +3,7 @@ import { checkByPattern } from './utils/funcs.js';
 import { empty } from './utils/funcs.js';
 import { cleanValue } from './utils/funcs.js';
 import { User } from './classes/user.js';
-var EXcheckEmail = /^[\w-\.]+@([\w-\.]{3,15})+[\w-]{2,8}$/;
+var EXcheckEmail = /^[\w-\.]+@([\w-]+\.)+[a-z]{3,4}$/;
 var EXcheckPassword = /^(?=.*[*#$.])(?!.*\s)[*#$.\w]{6,12}$/;
 
 document.getElementById("submit").addEventListener("click", () => {

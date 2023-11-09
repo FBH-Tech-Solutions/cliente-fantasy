@@ -26,28 +26,34 @@ function generateTable(arr) {
 
   for (let i = 0; i < arr.length; i++) {
     const row = document.createElement("tr");
+    
+    let key = ["img", "id", "name", "points" ,"nacionality", "owner", "rol" ] 
 
-    for (let key in arr[i]) {
+    let j = 0
+    while(j<key.length) {
+      
       const cell = document.createElement("td");
       cell.setAttribute("scope", "row");
+      cell.setAttribute("style", "vertical-align: middle; font-size:22px ")
 
-      if (key == "owner") {
-        if (findUser(arr[i][key])) {
-            insertCell(arr[i][key], cell, row);
+      if (key[j] == "owner") {
+        if (findUser(arr[i][key[j]])) {
+            insertCell(arr[i][key[j]], cell, row);
         } else {
           insertCell("Available", cell, row);
         }
       } else {
-        if (key == "img") {
+        if (key[j] == "img") {
           let image = document.createElement("img");
-          image.src = arr[i][key];
+          image.src = arr[i][key[j]];
           image.setAttribute("class", "shadow-lg rounded")
           cell.appendChild(image);
           row.appendChild(cell);
         } else {
-          insertCell(arr[i][key], cell, row);
+          insertCell(arr[i][key[j]], cell, row);
         }
       }
+      j++
     }
 
     tblBody.appendChild(row);
