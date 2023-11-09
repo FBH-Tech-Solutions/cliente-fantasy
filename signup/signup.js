@@ -48,6 +48,12 @@ btnSubmit.addEventListener("click", function () {
         );
         if (arrCh[0] < 6) {
           if (pass.value == pass2.value) {
+            arrCh[2].forEach((element) => {
+              setValidationBootstrap(
+                document.getElementById(element),
+                "is-valid"
+              );
+            });
             saveUserLocal();
             sendNotification("User created!", "alert alert-success");
             setTimeout(function(){
