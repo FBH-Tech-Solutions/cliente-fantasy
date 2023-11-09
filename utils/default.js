@@ -3,15 +3,25 @@ import { New } from "../classes/ClassNews.js";
 
 export let races = [
     new Race(1, 'Exciting race through the bustling streets of New York', 'New York', '../assets/races/bahrein.jpg', true),
-    new Race(2, 'Scenic race along the coastline of Los Angeles', 'Los Angeles', '../assets/races/bahrein.jpg', false),
-    new Race(3, 'Thrilling race in the heart of Chicago', 'Chicago', 'chicago.jpg', true),
-    new Race(4, 'Spectacular race along the beaches of Miami', 'Miami', 'miami.jpg', false),
-    new Race(5, 'Iconic race in the picturesque city of San Francisco', 'San Francisco', 'sanfrancisco.jpg', true),
-    new Race(6, 'Glamorous race in the entertainment capital of Las Vegas', 'Las Vegas', 'lasvegas.jpg', false),
-    new Race(7, 'Scenic race through the beautiful landscapes of Seattle', 'Seattle', 'seattle.jpg', true),
-    new Race(8, 'Exciting race at high altitudes in Denver', 'Denver', 'denver.jpg', false),
-    new Race(9, 'Historic race through the streets of Boston', 'Boston', 'boston.jpg', true),
-    new Race(10, 'Challenging race in the vibrant city of Dallas', 'Dallas', 'dallas.jpg', false)
+    new Race(2, 'Scenic race along the coastline of Los Angeles', 'Los Angeles', '../assets/races/los-angeles.jpg', false),
+    new Race(3, 'Thrilling race in the heart of Chicago', 'Chicago', '../assets/races/chicago.jpg', true),
+    new Race(4, 'Spectacular race along the beaches of Miami', 'Miami', '../assets/races/miami.jpg', false),
+    new Race(5, 'Iconic race in the picturesque city of San Francisco', 'San Francisco', '../assets/races/sanfrancisco.jpg', true),
+    new Race(6, 'Glamorous race in the entertainment capital of Las Vegas', 'Las Vegas', '../assets/races/lasvegas.jpg', false),
+    new Race(7, 'Scenic race through the beautiful landscapes of Seattle', 'Seattle', '../assets/races/seattle.jpg', true),
+    new Race(8, 'Exciting race at high altitudes in Denver', 'Denver', '../assets/races/denver.jpg', false),
+    new Race(9, 'Historic race through the streets of Boston', 'Boston', '../assets/races/boston.jpg', true),
+    new Race(10, 'Challenging race in the vibrant city of Dallas', 'Dallas', '../assets/races/dallas.jpg', false),
+    new Race(11, 'Enchanting race through the ancient streets of Rome', 'Rome', '../assets/races/rome.jpg', true),
+    new Race(12, 'Mysterious race in the mystical vibes of New Orleans', 'New Orleans', '../assets/races/neworleans.jpg', false),
+    new Race(13, 'Epic race along the Great Wall of China', 'Beijing', '../assets/races/greatwall.jpg', true),
+    new Race(14, 'Futuristic race in the neon-lit streets of Tokyo', 'Tokyo', '../assets/races/tokyo.jpg', false),
+    new Race(15, 'Wild race through the Amazon rainforest', 'Amazon', '../assets/races/amazon.jpg', true),
+    new Race(16, 'Awe-inspiring race at the Grand Canyon', 'Grand Canyon', '../assets/races/grandcanyon.jpg', false),
+    new Race(17, 'Magical race in the enchanting landscapes of Iceland', 'Reykjavik', '../assets/races/iceland.jpg', true),
+    new Race(18, 'Daring race on the iconic Route 66', 'Route 66', '../assets/races/route66.jpg', false),
+    new Race(19, 'Fast-paced race in the tech hub of Silicon Valley', 'San Jose', '../assets/races/siliconvaley.jpg', true),
+    new Race(20, 'Exhilarating race on the snowy slopes of Aspen', 'Aspen', '../assets/races/aspen.jpg', false)
 ]
 
 export let newsDefault = [
