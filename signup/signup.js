@@ -106,7 +106,7 @@ function getUserLocal() {
 
 function saveUserLocal() {
   let arrUsers = [];
-  var driversArray=addDrivers()
+  var driversArray=addDrivers(name.value)
   var points=0
   var online=0
   console.log(driversArray)
@@ -150,7 +150,7 @@ function findUser(arrUsers, nickname) {
   }
 }
 
-function addDrivers(){
+function addDrivers(owner){
   var drivers=[];
   for (let i = 0; i < 2; i++) {
     var rand=getRandomInt(driversAvailable.length)
@@ -158,17 +158,17 @@ function addDrivers(){
       if (i==0) {
         arrayDrivers[rand].rol="Main"
         driversAvailable[rand].rol="Main"
-        driversAvailable[rand].owner=name.value
+        driversAvailable[rand].owner=owner
       }
       if (i==1) {
         arrayDrivers[rand].rol="Substitute"
         driversAvailable[rand].rol="Substitute"
-        driversAvailable[rand].owner=name.value
+        driversAvailable[rand].owner=owner
       }
       drivers.push(driversAvailable[rand])
-        delete(driversAvailable[rand])
-        arrayDrivers[rand].owner=name.value
-      
+      driversAvailable.splice(rand, 1);
+      arrayDrivers[rand].owner=owner
+      console.log(arrayDrivers[rand].owner)
     }
   }
   var arrayDriversStr=JSON.stringify(arrayDrivers)
@@ -316,7 +316,7 @@ function addBots() {
 
       var botRandom = Math.floor(Math.random() * bot.length);
       console.log(botRandom)
-      var driversArray=addDrivers()
+      var driversArray=addDrivers(bot[botRandom].name)
 
       if (users==null) {
         users=[]

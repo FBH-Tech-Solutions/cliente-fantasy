@@ -67,160 +67,160 @@ export function drivers() {
       1,
       "Alexander Albon",
       "Tailandés",
-      "None",
       "Available",
+      "None",
       "/assets/drivers/alexander-albon.jpg"
     ),
     new Driver(
       2,
       "Carlos Sainz",
       "Español",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/carlos-sainz.jpg"
     ),
     new Driver(
       3,
       "Charles Leclerc",
       "Monegasco",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/charles-leclerc.jpg"
     ),
     new Driver(
       4,
       "Esteban Ocon",
       "Francés",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/esteban-ocon.jpg"
     ),
     new Driver(
       5,
       "Fernando Alonso",
       "Español",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/fernando-alonso.jpg"
     ),
     new Driver(
       6,
       "George Russell",
       "Británico",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/george-russell.jpg"
     ),
     new Driver(
       7,
       "Guanyu Zhou",
       "Chino",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/guanyu-zhou.jpg"
     ),
     new Driver(
       8,
       "Kevin Magnussen",
       "Dinamarqués",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/kevin-magnussen.jpg"
     ),
     new Driver(
       9,
       "Lance Stroll",
       "Canadiense",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/lance-stroll.jpg"
     ),
     new Driver(
       10,
       "Lando Norris",
       "Británico",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/lando-norris.jpg"
     ),
     new Driver(
       11,
       "Lewis Hamilton",
       "Británico",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/lewis-hamilton.jpg"
     ),
     new Driver(
       12,
       "Logan Sargeant",
       "Estadounidense",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/logan-sargeant.jpg"
     ),
     new Driver(
       13,
       "Max Verstappen",
       "Neerlandés",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/max-verstappen.jpg"
     ),
     new Driver(
       14,
       "Nico Hulkenberg",
       "Alemán",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/nico-hulkenberg.jpg"
     ),
     new Driver(
       15,
       "Nyck de Vries",
       "Neerlandés",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/nyck-de-vries.jpg"
     ),
     new Driver(
       16,
       "Oscar Piastri",
       "Australiano",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/oscar-piastri.jpg"
     ),
     new Driver(
       17,
       "Pierre Gasly",
       "Francés",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/pierre-gasly.jpg"
     ),
     new Driver(
       18,
       "Sergio Perez",
       "Mexicano",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/sergio-perez.jpg"
     ),
     new Driver(
       19,
       "Valtteri Bottas",
       "Finlandés",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/valtteri-bottas.jpg"
     ),
     new Driver(
       20,
       "Yuki Tsunoda",
       "Japonés",
-      "None",
       "Available",
+      "None",
       "../assets/drivers/yuki-tsunoda.jpg"
     ),
   ];
@@ -249,6 +249,7 @@ export function getRandomInt(max) {
 export function findUserFromEmail(email) {
   let arrUsers = getLocalStorage("users");
 
+  console.log(arrUsers)
   if (arrUsers) {
     let i = 0;
     while (i < arrUsers.length) {
@@ -256,7 +257,7 @@ export function findUserFromEmail(email) {
         return new User(
           arrUsers[i].nick,
           arrUsers[i].name,
-          arrUsers[i].surname,
+          arrUsers[i].surnames,
           arrUsers[i].email,
           arrUsers[i].pass,
           arrUsers[i].points,

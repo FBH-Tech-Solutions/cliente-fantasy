@@ -37,7 +37,7 @@ function generateTable(arr) {
       cell.setAttribute("style", "vertical-align: middle; font-size:22px ")
 
       if (key[j] == "owner") {
-        if (findUser(arr[i][key[j]])) {
+        if (arr[i][key[j]]) {
             insertCell(arr[i][key[j]], cell, row);
         } else {
           insertCell("Available", cell, row);
