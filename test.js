@@ -1,0 +1,3 @@
+import { navbar } from "./utils/componentes.js";
+
+navbar('{"nick":"NitroRider","name":"Olivia","surnames":"Owens","email":"olivia@email.com","pass":"nitroPower","points":53,"online":0,"myDrivers":[{"id":4,"name":"Esteban Ocon","nacionality":"French","owner":"Olivia","rol":"Main","points":28,"img":"../assets/drivers/esteban-ocon.jpg"},{"id":6,"name":"George Russell","nacionality":"British","owner":"Alex","rol":"Substitute","points":25,"img":"../assets/drivers/george-russell.jpg"}')
