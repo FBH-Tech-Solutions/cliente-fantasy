@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio sesión</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="Icon" href="/assets/iconF1.jpg" />
+</head>
+<link rel="stylesheet" href="https://getbootstrap.com/docs/5.0/examples/sidebars/sidebars.css">
+</head>
+<body>
+
+    <main>
+            <nav class="d-flex flex-column flex-shrink-0 p-3 bg-light">
+                <a class="navbar-brand py-3" href="/home">
+                    <img src="/assets/logoFormula1.png" height="40" alt="Company Logo">
+                </a>
+                <div class="">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="nav nav-pills flex-column mb-auto" id="navbarNavDropdown">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 " aria-current="page" href="/home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="/drivers">Drivers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="/my-drivers">My drivers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="/admin">Race</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="/ranking">Ranking</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    ${user.nick}
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/profile">My profile</a></li>
+                                    <li><a class="dropdown-item btn btn-danger" id="logout">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </main>
+    <script src="sidebars.js"></script>
+</body>
+
+</html>
+
+</div>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
