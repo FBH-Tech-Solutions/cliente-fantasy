@@ -22,8 +22,15 @@ let patternMail = /^[\w-\.]+@([\w-]+\.)+[a-z]{3,4}$/;
 let patterNickName = /^[\w-\.]{4,10}$/;
 let patternPass = /^[a-zA-Z0-9\-.*#$]{6,10}$/;
 
-var arrayDrivers=drivers()
-var driversAvailable=drivers()
+var arrayDrivers=getLocalStorage("drivers")
+var driversAvailable=getLocalStorage("availableDriver")
+
+if(driversAvailable == null){
+  driversAvailable = drivers()
+}
+if(arrayDrivers==null){
+  arrayDrivers=drivers()
+}
 
 addBots()
 
@@ -152,23 +159,29 @@ function findUser(arrUsers, nickname) {
 
 function addDrivers(owner){
   var drivers=[];
-  for (let i = 0; i < 2; i++) {
+  let i = 0
+  while(drivers.length<2){
     var rand=getRandomInt(driversAvailable.length)
     if (driversAvailable[rand]!=null) {
       if (i==0) {
         arrayDrivers[rand].rol="Main"
         driversAvailable[rand].rol="Main"
         driversAvailable[rand].owner=owner
+        i++
       }
       if (i==1) {
         arrayDrivers[rand].rol="Substitute"
         driversAvailable[rand].rol="Substitute"
         driversAvailable[rand].owner=owner
+        i++
       }
       drivers.push(driversAvailable[rand])
-      driversAvailable.splice(rand, 1);
+      // driversAvailable.splice(rand, 1);
+
+      driversAvailable[rand] = null
+
       arrayDrivers[rand].owner=owner
-      console.log(arrayDrivers[rand].owner)
+      setLocalStorate("availableDriver", driversAvailable)
     }
   }
   var arrayDriversStr=JSON.stringify(arrayDrivers)
@@ -315,7 +328,6 @@ function addBots() {
     while (arrayBots.length<2) {
 
       var botRandom = Math.floor(Math.random() * bot.length);
-      console.log(botRandom)
       var driversArray=addDrivers(bot[botRandom].name)
 
       if (users==null) {

@@ -60,7 +60,19 @@ function changeData(d1, d2) {
       driver2.textContent = d2.name;
       d2.rol = "Substitute";
       rol2.textContent = d2.rol;
-      
+
+      var drivers=getLocalStorage("drivers")
+      for (let i = 0; i < drivers.length; i++) {
+        if (drivers[i].name==driver1.textContent) {
+          drivers[i].rol="Main"
+        }else{
+          if (drivers[i].name==driver2.textContent) {
+            drivers[i].rol="Substitute"
+          }
+        }
+      }
+      var arrayDriversStr=JSON.stringify(drivers)
+      localStorage.setItem("drivers",arrayDriversStr)
 }
 
 button.addEventListener("click", function () {
