@@ -88,6 +88,7 @@ btnLaunch.addEventListener("click", function () {
     aux[1] = aux1;
 
   console.log(aux);
+
   console.log(k)
   if(k==110){
 
@@ -116,6 +117,10 @@ btnLaunch.addEventListener("click", function () {
     y++;
 }
 }
+
+aux1 = aux[1];
+aux[1] = aux[0];
+aux[0] = aux1;
 
   let race = null;
 
