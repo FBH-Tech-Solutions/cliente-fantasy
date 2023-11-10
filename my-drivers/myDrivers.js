@@ -60,6 +60,7 @@ function changeData(d1, d2) {
       driver2.textContent = d2.name;
       d2.rol = "Substitute";
       rol2.textContent = d2.rol;
+      
 }
 
 button.addEventListener("click", function () {
@@ -84,7 +85,6 @@ button.addEventListener("click", function () {
           if (driver2.textContent == users[i].myDrivers[0].name) {
 
             //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
-            console.log("This is main");
           } else {
             changeData(users[i].myDrivers[1], users[i].myDrivers[0]);
           }

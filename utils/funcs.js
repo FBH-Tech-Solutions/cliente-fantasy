@@ -66,7 +66,7 @@ export function drivers() {
     new Driver(
       1,
       "Alexander Albon",
-      "Tailandés",
+      "Thai",
       "Available",
       "None",
       "/assets/drivers/alexander-albon.jpg"
@@ -74,7 +74,7 @@ export function drivers() {
     new Driver(
       2,
       "Carlos Sainz",
-      "Español",
+      "Spanish",
       "Available",
       "None",
       "../assets/drivers/carlos-sainz.jpg"
@@ -82,7 +82,7 @@ export function drivers() {
     new Driver(
       3,
       "Charles Leclerc",
-      "Monegasco",
+      "Monegasque",
       "Available",
       "None",
       "../assets/drivers/charles-leclerc.jpg"
@@ -90,7 +90,7 @@ export function drivers() {
     new Driver(
       4,
       "Esteban Ocon",
-      "Francés",
+      "French",
       "Available",
       "None",
       "../assets/drivers/esteban-ocon.jpg"
@@ -98,7 +98,7 @@ export function drivers() {
     new Driver(
       5,
       "Fernando Alonso",
-      "Español",
+      "Spanish",
       "Available",
       "None",
       "../assets/drivers/fernando-alonso.jpg"
@@ -106,7 +106,7 @@ export function drivers() {
     new Driver(
       6,
       "George Russell",
-      "Británico",
+      "British",
       "Available",
       "None",
       "../assets/drivers/george-russell.jpg"
@@ -114,7 +114,7 @@ export function drivers() {
     new Driver(
       7,
       "Guanyu Zhou",
-      "Chino",
+      "Chinese",
       "Available",
       "None",
       "../assets/drivers/guanyu-zhou.jpg"
@@ -122,7 +122,7 @@ export function drivers() {
     new Driver(
       8,
       "Kevin Magnussen",
-      "Dinamarqués",
+      "Danish",
       "Available",
       "None",
       "../assets/drivers/kevin-magnussen.jpg"
@@ -130,7 +130,7 @@ export function drivers() {
     new Driver(
       9,
       "Lance Stroll",
-      "Canadiense",
+      "Canadian",
       "Available",
       "None",
       "../assets/drivers/lance-stroll.jpg"
@@ -138,7 +138,7 @@ export function drivers() {
     new Driver(
       10,
       "Lando Norris",
-      "Británico",
+      "British",
       "Available",
       "None",
       "../assets/drivers/lando-norris.jpg"
@@ -146,7 +146,7 @@ export function drivers() {
     new Driver(
       11,
       "Lewis Hamilton",
-      "Británico",
+      "British",
       "Available",
       "None",
       "../assets/drivers/lewis-hamilton.jpg"
@@ -154,7 +154,7 @@ export function drivers() {
     new Driver(
       12,
       "Logan Sargeant",
-      "Estadounidense",
+      "American",
       "Available",
       "None",
       "../assets/drivers/logan-sargeant.jpg"
@@ -162,7 +162,7 @@ export function drivers() {
     new Driver(
       13,
       "Max Verstappen",
-      "Neerlandés",
+      "Dutch",
       "Available",
       "None",
       "../assets/drivers/max-verstappen.jpg"
@@ -170,7 +170,7 @@ export function drivers() {
     new Driver(
       14,
       "Nico Hulkenberg",
-      "Alemán",
+      "German",
       "Available",
       "None",
       "../assets/drivers/nico-hulkenberg.jpg"
@@ -178,7 +178,7 @@ export function drivers() {
     new Driver(
       15,
       "Nyck de Vries",
-      "Neerlandés",
+      "Dutch",
       "Available",
       "None",
       "../assets/drivers/nyck-de-vries.jpg"
@@ -186,7 +186,7 @@ export function drivers() {
     new Driver(
       16,
       "Oscar Piastri",
-      "Australiano",
+      "Australian",
       "Available",
       "None",
       "../assets/drivers/oscar-piastri.jpg"
@@ -194,7 +194,7 @@ export function drivers() {
     new Driver(
       17,
       "Pierre Gasly",
-      "Francés",
+      "French",
       "Available",
       "None",
       "../assets/drivers/pierre-gasly.jpg"
@@ -202,7 +202,7 @@ export function drivers() {
     new Driver(
       18,
       "Sergio Perez",
-      "Mexicano",
+      "Mexican",
       "Available",
       "None",
       "../assets/drivers/sergio-perez.jpg"
@@ -210,7 +210,7 @@ export function drivers() {
     new Driver(
       19,
       "Valtteri Bottas",
-      "Finlandés",
+      "Finnish",
       "Available",
       "None",
       "../assets/drivers/valtteri-bottas.jpg"
@@ -218,11 +218,11 @@ export function drivers() {
     new Driver(
       20,
       "Yuki Tsunoda",
-      "Japonés",
+      "Japanese",
       "Available",
       "None",
       "../assets/drivers/yuki-tsunoda.jpg"
-    ),
+    ),    
   ];
 
   return arrDrivers;

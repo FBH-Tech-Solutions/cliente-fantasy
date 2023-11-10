@@ -20,12 +20,11 @@ let btnLaunch = document.getElementById("btn-launch");
 let progresBar = document.getElementById("progress-bar");
 let progres = document.getElementById("progress");
 
-
 navbar(foundLoged());
 footer();
 
 btnLaunch.addEventListener("click", function () {
-    progres.removeAttribute("hidden")
+  progres.removeAttribute("hidden");
   let arrDrivers = null;
   let i = 0;
   let arrNum = new Array();
@@ -75,7 +74,7 @@ btnLaunch.addEventListener("click", function () {
       setTimeout(function () {
         progresBar.textContent = `${k}%`;
         progresBar.style.width = `${k}%`;
-      }, 82 * k);
+      }, 100 * k);
     })(k);
     k = k + 10;
   }
@@ -83,25 +82,22 @@ btnLaunch.addEventListener("click", function () {
   let y = 0;
 
   console.log(aux);
-    let aux1 = aux[0];
-    aux[0] = aux[1];
-    aux[1] = aux1;
+  let aux1 = aux[0];
+  aux[0] = aux[1];
+  aux[1] = aux1;
 
   console.log(aux);
-  console.log(k)
-  if(k==110){
-
-      while (y < aux.length) {
-          // card.removeAttribute("style")
-          let imgDriver = document.getElementById("car-drivers");
-    // aux[y].sumPoints()
-    let test = "m-5"
-    let size = "12rem"
-    if(y==1){
-        test = "m-1"
-        size="15rem"
-    }
-    imgDriver.innerHTML += `
+  console.log(k);
+  if (k == 110) {
+    while (y < aux.length) {
+      let imgDriver = document.getElementById("car-drivers");
+      let test = "m-5";
+      let size = "12rem";
+      if (y == 1) {
+        test = "m-1";
+        size = "15rem";
+      }
+      imgDriver.innerHTML += `
     <div class="card ${test}" style="width: ${size};">
     <img src="${aux[y].img}" class="card-img-top">
     <div class="card-body">
@@ -110,12 +106,12 @@ btnLaunch.addEventListener("click", function () {
     </div>
     </div>
     `;
-    cardImage.setAttribute("src", aux[y].img);
-    cardtitle.textContent = aux[y].name;
-    
-    y++;
-}
-}
+      cardImage.setAttribute("src", aux[y].img);
+      cardtitle.textContent = aux[y].name;
+
+      y++;
+    }
+  }
 
   let race = null;
 
