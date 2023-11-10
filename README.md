@@ -79,7 +79,26 @@ Para hacerse una idea de como va a quedar la convinación de ambos colores con l
 
 <h3 style="text-align:center">Fuentes</h3>
 <hr>
+Las fuentes desempeñan un papel crucial en la identidad visual de nuestro proyecto. La elección de las fuentes adecuadas garantiza una apariencia coherente y atractiva en todos los aspectos del diseño. A continuación, se detallan las fuentes que definirán nuestra identidad visual y cómo se usarán en diversos contextos.
 
+Títulos
+
+-**Login y Registro:** Hemos optado por utilizar la fuente <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> para los títulos en estas secciones.
+<br>
+
+<img src="./assets/opensans.png" width="80%">
+<br>
+
+-**Texto de la Página:** La tipografía seleccionada para el cuerpo del texto es <a href="https://developer.apple.com/fonts/">San Francisco</a>.
+<br>
+
+<img src="./assets/sanfrancisco.png" width="80%">
+<br>
+
+-**Barra de Navegación:** Para la barra de navegación, hemos elegido la tipografía <a href="https://www.f1assets.com/fonts">Formula 1</a> para asegurar una apariencia distintiva y legible.
+<br>
+
+<img src="./assets/F1_font.png" width="80%">
 <h3 style="text-align:center">Iconografía</h3>
 <hr>
 El logo que usaremos para nuestro Fantasy F1, será el siguiente:
