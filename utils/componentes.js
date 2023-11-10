@@ -3,8 +3,37 @@ import { findUser, findUserFromEmail, getLocalStorage, logoutUser, setLocalStora
 
 export function navbar(user) {
   let newDiv = document.createElement("div");
-	console.log(user)
-  newDiv.innerHTML = `    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-lg">
+
+  let checkSwitch = getLocalStorage("checked")
+  if(checkSwitch == null){
+	checkSwitch = "checked"
+  }
+  
+  let colorNav = getLocalStorage("color")
+
+  let position = null
+  let collapse = null
+  let darkmenu = null
+
+  if(colorNav == null){
+	position = "navbar navbar-expand-md navbar-dark bg-dark shadow-lg"
+	collapse = "collapse navbar-collapse"
+	darkmenu = "dropdown-menu-dark"
+	setLocalStorate("colorNav","dark")
+}else{
+	if(colorNav == "dark"){
+		position = "navbar navbar-expand-md navbar-dark bg-dark shadow-lg"
+	}
+	if(colorNav== "white" ){
+		collapse= "nav nav-pills flex-column mb-auto"
+		position = "d-flex flex-column flex-shrink-0 p-3 bg-light"
+		document.getElementById("main").style = getLocalStorage("main")
+	}
+  }
+  
+
+  newDiv.innerHTML = `
+      <nav class="${position}">
   <a class="navbar-brand py-3" href="/home">
 	<img src="/assets/logoFormula1.png" height="40" alt="Company Logo">
   </a>
@@ -13,7 +42,7 @@ export function navbar(user) {
 	  <span class="navbar-toggler-icon"></span>
 	</button>
 
-	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+	<div class="${collapse}" id="navbarNavDropdown">
 	  <ul class="navbar-nav mx-auto">
 		<li class="nav-item">
 		  <a class="nav-link mx-2 " aria-current="page" href="/home">Home</a>
@@ -30,17 +59,23 @@ export function navbar(user) {
 		<li class="nav-item">
 		  <a class="nav-link mx-2" href="/ranking">Ranking</a>
 		</li>
-		<li class="nav-item dropdown">
-		  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		<li class="nav-item dropdown mr-5">
+		  <a class="d-flex nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 			${user.nick}
 		  </a>
-		  <ul class="dropdown-menu dropdown-menu-dark">
+		  <ul class="dropdown-menu ${darkmenu}">
 			<li><a class="dropdown-item" href="/profile">My profile</a></li>
 			<li><a class="dropdown-item btn btn-danger" id="logout">Logout</a></li>
 		  </ul>
-		</li>
-
+		  </li>
+		  
+		  <label class="form-check-label" for="flexSwitchCheckChecked">☀</label>
+		  <div class="form-check form-switch">
+		  <label class="form-check-label" for="flexSwitchCheckChecked">🌑</label>
+		  <input class="form-check-input" type="checkbox" role="switch" id="switch" ${checkSwitch}>
+		</div>
 	  </ul>
+
 	</div>
   </div>
 </nav>`
@@ -48,6 +83,27 @@ export function navbar(user) {
 let navbar = document.getElementById("navbar")
 navbar.appendChild(newDiv)
 logoutUser(user)
+
+let switchCheck = document.getElementById("switch")
+
+switchCheck.addEventListener('input',function(){
+	let checked = getLocalStorage("checked")
+	let aux = null
+		if(switchCheck.checked){
+			aux = "checked"
+			switchCheck.removeAttribute("checked")
+			setLocalStorate("color", "dark")
+		}else{
+			aux = ""
+			switchCheck.setAttribute("checked", true)
+			let styleMain =  "display: flex; flex-wrap: nowrap; height: 100vh; max-height: 100vh; overflow-x: auto; overflow-y: hidden;"
+			setLocalStorate("main",styleMain)
+			setLocalStorate("color", "white")
+
+		}
+	setLocalStorate("checked", aux)
+	location.reload();
+})
 
 }
 
