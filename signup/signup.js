@@ -16,8 +16,8 @@ let pass2 = document.getElementById("passwordConfirm");
 let btnSubmit = document.getElementById("btn-submit");
 
 //patterns
-let patterName = /^[a-zA-Z]{2,20}$/;
-let patterSurName = /^[a-zA-Z]{2,30}$/;
+let patterName = /^[a-zA-Z-\s]{2,20}$/;
+let patterSurName = /^[a-zA-Z-\s]{2,30}$/;
 let patternMail = /^[\w-\.]+@([\w-]+\.)+[a-z]{3,4}$/;
 let patterNickName = /^[\w-\.]{4,10}$/;
 let patternPass = /^[a-zA-Z0-9\-.*#$]{6,10}$/;

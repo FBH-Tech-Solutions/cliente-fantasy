@@ -20,12 +20,11 @@ let btnLaunch = document.getElementById("btn-launch");
 let progresBar = document.getElementById("progress-bar");
 let progres = document.getElementById("progress");
 
-
 navbar(foundLoged());
 footer();
 
 btnLaunch.addEventListener("click", function () {
-    progres.removeAttribute("hidden")
+  progres.removeAttribute("hidden");
   let arrDrivers = null;
   let i = 0;
   let arrNum = new Array();
@@ -75,7 +74,7 @@ btnLaunch.addEventListener("click", function () {
       setTimeout(function () {
         progresBar.textContent = `${k}%`;
         progresBar.style.width = `${k}%`;
-      }, 82 * k);
+      }, 100 * k);
     })(k);
     k = k + 10;
   }
@@ -83,9 +82,9 @@ btnLaunch.addEventListener("click", function () {
   let y = 0;
 
   console.log(aux);
-    let aux1 = aux[0];
-    aux[0] = aux[1];
-    aux[1] = aux1;
+  let aux1 = aux[0];
+  aux[0] = aux[1];
+  aux[1] = aux1;
 
   console.log(aux);
 
@@ -111,12 +110,12 @@ btnLaunch.addEventListener("click", function () {
     </div>
     </div>
     `;
-    cardImage.setAttribute("src", aux[y].img);
-    cardtitle.textContent = aux[y].name;
-    
-    y++;
-}
-}
+      cardImage.setAttribute("src", aux[y].img);
+      cardtitle.textContent = aux[y].name;
+
+      y++;
+    }
+  }
 
 aux1 = aux[1];
 aux[1] = aux[0];
