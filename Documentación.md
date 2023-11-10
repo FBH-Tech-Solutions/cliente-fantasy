@@ -200,4 +200,5 @@ Además de que hay una barra que se carga haciendo simular operaciones en backgr
 <h2 style="text-align:center">Mapa de navegación</h2>
 <img src="./assets/mapa_navegacion_circular_texto.png"></img>
 
-
+<hr>
+Hay que jugar con el cambio de los estilos claro/oscuro del navbar dado que es necesario recargar la pagina para que se apliquen los cambios.
