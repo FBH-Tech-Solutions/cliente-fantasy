@@ -16,3 +16,10 @@ p{
   color: white;
 }
 
+#footer {
+  color: white;
+  background-color: #212529;
+  bottom: 0;
+  margin-top: 54px;
+}
+

@@ -85,7 +85,7 @@ export function footer(){
 	let newFooter=document.createElement("div");
 
 	newFooter.innerHTML=`<div class="container">
-	<div class="row">
+	<div class="row">	
 	  <div class="col-md-4">
 		<ul>
 		  <li style="display: inline-block;"><a href="https://twitter.com/home"><img class="rounded" src="../assets/icons/x.jpeg" alt="" style="width: 25px;"></a></li>
