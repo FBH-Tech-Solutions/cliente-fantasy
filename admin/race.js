@@ -1,4 +1,3 @@
-import { Race } from "../classes/ClassRace.js";
 import { newsDefault, races } from "../utils/default.js";
 import { footer, navbar } from "../utils/componentes.js";
 import {
@@ -30,14 +29,12 @@ btnLaunch.addEventListener("click", function () {
   let arrNum = new Array();
   let aux = [];
 
-  //Check empty localStorage of drivers
   if (getLocalStorage("drivers")) {
     arrDrivers = getLocalStorage("drivers");
   } else {
     arrDrivers = drivers();
   }
 
-  //function to set points random for drivers
   while (i < arrDrivers.length) {
     let rand = getRandomInt(arrDrivers.length);
 
@@ -81,20 +78,14 @@ btnLaunch.addEventListener("click", function () {
 
   let y = 0;
 
-  console.log(aux);
   let aux1 = aux[0];
   aux[0] = aux[1];
   aux[1] = aux1;
 
-  console.log(aux);
-
-  console.log(k)
   if(k==110){
 
       while (y < aux.length) {
-          // card.removeAttribute("style")
           let imgDriver = document.getElementById("car-drivers");
-    // aux[y].sumPoints()
     let test = "m-5"
     let size = "12rem"
     if(y==1){
@@ -169,7 +160,6 @@ aux[0] = aux1;
   }, 9000);
 });
 
-//function to load obj for card
 let race = null;
 
 if (getLocalStorage("races")) {

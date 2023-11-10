@@ -1,4 +1,4 @@
-import { foundLoged, getLocalStorage, logoutUser, setLocalStorate } from "../utils/funcs.js";
+import { foundLoged, getLocalStorage } from "../utils/funcs.js";
 import { footer, navbar } from "../utils/componentes.js";
 navbar(foundLoged());
 
@@ -45,7 +45,6 @@ function loadDrivers() {
         optionDriver1.textContent = user.myDrivers[0].name;
       }
     } else {
-      console.log("We don't found drivers");
     }
   }
 }
@@ -86,17 +85,13 @@ button.addEventListener("click", function () {
     if (user.nick==users[i].nick) {
       if (selectedOption === "1") {
         if (driver1.textContent == users[i].myDrivers[0].name) {
-          //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
-          console.log("This is main");
         } else {
           changeData(users[i].myDrivers[0], users[i].myDrivers[1]);
-          console.log(users[i].myDrivers[0], users[i].myDrivers[1])
         }
       } else {
         if (selectedOption === "2") {
           if (driver2.textContent == users[i].myDrivers[0].name) {
 
-            //Error de que el driver es el mismo y debe saltar un mensaje de que es el mismo driver
           } else {
             changeData(users[i].myDrivers[1], users[i].myDrivers[0]);
           }

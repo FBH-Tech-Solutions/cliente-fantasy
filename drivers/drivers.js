@@ -1,22 +1,17 @@
 import { footer, navbar } from "../utils/componentes.js";
 import { foundLoged, getLocalStorage } from "../utils/funcs.js";
 import { drivers } from "../utils/funcs.js";
-import { findUser } from "../utils/funcs.js";
 
 navbar(foundLoged());
-console.log(foundLoged)
 
 let arr = null
 
-
-//Check empty localStorage of drivers
 if(getLocalStorage("drivers")){
 
   arr = getLocalStorage("drivers")
 }else{
   arr = drivers()
 }
-
 
 generateTable(arr);
 
@@ -48,7 +43,6 @@ function generateTable(arr) {
 
       if (key[j] == "owner") {
         if(i==6){
-          console.log(arr[i][key[j]])
         }
         if (arr[i][key[j]]) {
             insertCell(arr[i][key[j]], cell, row);

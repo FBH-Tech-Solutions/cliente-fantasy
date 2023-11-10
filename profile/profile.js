@@ -32,7 +32,6 @@ formSave.addEventListener('input', function(){
                   if (checkPattern[0]<5) {
                     saveData()
                     sendNotification("Edited User!", "alert alert-success");
-                    console.log(users)
                   }else {
                       arrCh[1].forEach((element) => {
                         setValidationBootstrap(
@@ -72,10 +71,8 @@ formChange.addEventListener('input',function(){
 
   buttonChange.addEventListener('click', function(){
     if(empty(password.value)&&patternPass.test(password.value)){
-      console.log("Contraseña está vacia")
     }else{
       if (password.value==user.pass) {
-        console.log("La contrasenia es la misma")
       }else{
         saveChange()
         sendNotification("Edited Password!", "alert alert-success");
@@ -132,13 +129,7 @@ function checkEmptyValues(name, surnames, email) {
     let i = 0;
   
     while (i < arrValues.length) {
-      console.log(
-        arrValues[i].value,
-        ":",
-        arrPatterns[i],
-        ":",
-        arrPatterns[i].test(arrValues[i].value)
-      );
+
       if (arrPatterns[i].test(arrValues[i].value)) {
         passedTest.push(arrValues[i].id);
       } else {

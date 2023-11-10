@@ -1,5 +1,4 @@
-import { User } from "../classes/user.js";
-import { findUser, findUserFromEmail, getLocalStorage, logoutUser, setLocalStorate } from "./funcs.js";
+import { getLocalStorage, logoutUser, setLocalStorate } from "./funcs.js";
 
 export function navbar(user) {
   let newDiv = document.createElement("div");
