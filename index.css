@@ -13,7 +13,6 @@ video {
     min-height: 100%;
 }
 
-/* Asegúrate de que otros elementos estén encima del video */
 .container {
     position: relative;
     z-index: 1;

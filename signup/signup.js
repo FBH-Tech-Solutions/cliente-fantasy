@@ -1,10 +1,8 @@
 import { User } from "../classes/user.js";
-import { checkByPattern, drivers, getRandomInt, setLocalStorate } from "../utils/funcs.js";
+import { drivers, getRandomInt, setLocalStorate } from "../utils/funcs.js";
 import { sendNotification } from "../utils/funcs.js";
-import { checkEqualValues } from "../utils/funcs.js";
 import { getLocalStorage } from "../utils/funcs.js";
 import { empty } from "../utils/funcs.js";
-import { numChars } from "../utils/funcs.js";
 import { setValidationBootstrap } from "../utils/funcs.js";
 
 let name = document.getElementById("name");
@@ -15,7 +13,6 @@ let pass = document.getElementById("password");
 let pass2 = document.getElementById("passwordConfirm");
 let btnSubmit = document.getElementById("btn-submit");
 
-//patterns
 let patterName = /^[a-zA-Z-\s]{2,20}$/;
 let patterSurName = /^[a-zA-Z-\s]{2,30}$/;
 let patternMail = /^[\w-\.]+@([\w-]+\.)+[a-z]{3,4}$/;
@@ -116,7 +113,6 @@ function saveUserLocal() {
   var driversArray=addDrivers(name.value)
   var points=0
   var online=0
-  console.log(driversArray)
   
   if (localStorage.getItem("users")) {
     arrUsers = JSON.parse(localStorage.getItem("users"));
@@ -176,7 +172,6 @@ function addDrivers(owner){
         i++
       }
       drivers.push(driversAvailable[rand])
-      // driversAvailable.splice(rand, 1);
 
       driversAvailable[rand] = null
 
@@ -208,33 +203,6 @@ function checkEmptyValues(name, surnames, nick, email, pass, pass2) {
   let rtnArr = [emptyValues, notEmptyValues];
 
   return rtnArr;
-}
-
-function checkNameAndSurnames(
-  checkCharsName,
-  name,
-  checkCharsSurName,
-  surnames
-) {
-  let check = true;
-
-  if (checkByPattern(checkCharsName, name)) {
-    sendNotification(
-      "The name must have between 2 and 20 chars",
-      "alert alert-danger"
-    );
-    check = false;
-  }
-
-  if (checkByPattern(checkCharsSurName, surnames)) {
-    sendNotification(
-      "The surname must have between 2 and 30 chars",
-      "alert alert-danger"
-    );
-    check = false;
-  }
-
-  return check;
 }
 
 function checkPatternValues(
@@ -275,13 +243,6 @@ function checkPatternValues(
   let i = 0;
 
   while (i < arrValues.length) {
-    console.log(
-      arrValues[i].value,
-      ":",
-      arrPatterns[i],
-      ":",
-      arrPatterns[i].test(arrValues[i].value)
-    );
     if (arrPatterns[i].test(arrValues[i].value)) {
       passedTest.push(arrValues[i].id);
     } else {
@@ -335,11 +296,9 @@ function addBots() {
       }
 
       var newBot= new User(bot[botRandom].nick,bot[botRandom].name,bot[botRandom].surnames,bot[botRandom].email,bot[botRandom].pass,bot[botRandom].points,bot[botRandom].online,driversArray)
-      console.log(newBot)
       arrayBots.push(newBot)
       users.push(newBot)
       setLocalStorate("users",users)
-      console.log(arrayBots)
       let stringArr = JSON.stringify(arrayBots);
       localStorage.setItem("bots", stringArr);
     }

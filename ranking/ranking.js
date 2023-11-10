@@ -22,18 +22,15 @@ function loadRanking(){
                 }
                 j++
             }
-            console.log(users[i].surnames)
             var user = new User (users[i].nick,users[i].name,users[i].surnames,users[i].email,users[i].pass,users[i].points,users[i].online,users[i].myDrivers);
             user.sumPoints()
             var x=0
             while (x<users.length) {
-                console.log("llego") 
                 if (users[x].nick==user.nick) {
                     users[x].points=user.points
                 }
                 x++
             }
-            // console.log(users)
             let stringArr = JSON.stringify(users);
             localStorage.setItem("users", stringArr);
         }

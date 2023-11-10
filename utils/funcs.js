@@ -28,7 +28,6 @@ export function sendNotification(message, type) {
   notification.appendChild(newP);
   newP.innerHTML = message;
 
-  // document.insertBefore(divNot, newDiv);
 }
 
 export function checkEqualValues(value1, value2) {
@@ -49,7 +48,6 @@ export function empty(num) {
 }
 
 export function cleanValue(element) {
-  console.log(element.value);
   return (element.value = "");
 }
 
@@ -249,7 +247,6 @@ export function getRandomInt(max) {
 export function findUserFromEmail(email) {
   let arrUsers = getLocalStorage("users");
 
-  console.log(arrUsers)
   if (arrUsers) {
     let i = 0;
     while (i < arrUsers.length) {

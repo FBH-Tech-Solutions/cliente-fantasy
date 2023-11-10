@@ -15,7 +15,6 @@ let sectionNews = document.getElementById("section-news")
 
     
 for (let i = news.length-1; i > 0; i--) {
-    console.log(news[i].image)
     sectionNews.innerHTML+=`<div class="card m-3" style="width: 18rem;">
     <img src="${news[i].image}" id="test" class="card-img-top" alt="...">
     <div class="card-body">
