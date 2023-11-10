@@ -8,22 +8,6 @@
     border: 0;
 }
 
-
-  #profile{
-    background-color: #262626;
-    padding: 20px;
-    margin-top: 13%;
-    margin-left: 5%;
-}
-
-#profile button{
-    background-color: rgb(249, 29, 0);
-    border-color: rgb(249, 29, 0);
-    text-align: center;
-    padding: 10px;
-
-}
-
 label{
     color: white;
 }
@@ -32,27 +16,3 @@ p{
   color: white;
 }
 
-/* footer {
-  background-color: #333;
-  position: fixed;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  margin-top: auto;
-  font-size: 20px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-#footer-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 15px;
-}
-
-#footer-content a {
-  color: #ffffff;
-  margin: 15px;
-} */

@@ -44,11 +44,3 @@ body{
     background-color: rgb(249, 29, 0);
     border-color: rgb(249, 29, 0);
 }
-
-
-  #footer{
-    position: absolute;
-    color: white;
-    bottom: 0;
-    width: 100%;
-}
