@@ -44,3 +44,7 @@ body{
     background-color: rgb(249, 29, 0);
     border-color: rgb(249, 29, 0);
 }
+
+#footer {
+    color: white;
+  }
