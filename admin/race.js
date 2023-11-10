@@ -87,17 +87,21 @@ btnLaunch.addEventListener("click", function () {
   aux[1] = aux1;
 
   console.log(aux);
-  console.log(k);
-  if (k == 110) {
-    while (y < aux.length) {
-      let imgDriver = document.getElementById("car-drivers");
-      let test = "m-5";
-      let size = "12rem";
-      if (y == 1) {
-        test = "m-1";
-        size = "15rem";
-      }
-      imgDriver.innerHTML += `
+
+  console.log(k)
+  if(k==110){
+
+      while (y < aux.length) {
+          // card.removeAttribute("style")
+          let imgDriver = document.getElementById("car-drivers");
+    // aux[y].sumPoints()
+    let test = "m-5"
+    let size = "12rem"
+    if(y==1){
+        test = "m-1"
+        size="15rem"
+    }
+    imgDriver.innerHTML += `
     <div class="card ${test}" style="width: ${size};">
     <img src="${aux[y].img}" class="card-img-top">
     <div class="card-body">
@@ -112,6 +116,10 @@ btnLaunch.addEventListener("click", function () {
       y++;
     }
   }
+
+aux1 = aux[1];
+aux[1] = aux[0];
+aux[0] = aux1;
 
   let race = null;
 
