@@ -1,3 +1,10 @@
+.card{
+  background: -webkit-linear-gradient(left top, rgb(249, 29, 0), rgb(21, 21, 30));
+  color: white;
+  border-color: rgb(249, 29, 0);
+}
+
+
 #footer {
     background-color: #333;
     color: #fff;
@@ -17,4 +24,7 @@
   #footer-content a {
     color: #ffffff;
     margin: 15px;
+  }
+  body{
+    background-color: #212529;
   }

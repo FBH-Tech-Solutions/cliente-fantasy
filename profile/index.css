@@ -1,14 +1,4 @@
-h1 {  
-  font-size: 50px;  
-  background: -webkit-linear-gradient(left top, rgb(249, 29, 0), rgb(21, 21, 30));
-  background: linear-gradient(to bottom right, rgb(249, 29, 0), rgb(21, 21, 30));
-  -webkit-background-clip: text;  
-  -webkit-text-fill-color: transparent;
-  padding-bottom: 5px;  
-  margin-left: 20%;
-}
-
-  body{
+ body{
     background-image: url(../assets/pit_stop.png);
     background-size: cover;
     background-repeat: no-repeat;

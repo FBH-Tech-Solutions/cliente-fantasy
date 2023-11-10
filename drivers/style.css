@@ -2,15 +2,7 @@ body{
     background-color: #212529;
 }
 
-h1 {  
-    font-size: 50px;  
-    background: -webkit-linear-gradient(left top, rgb(249, 29, 0), rgb(21, 21, 30));
-    background: linear-gradient(to bottom right, rgb(249, 29, 0), rgb(21, 21, 30));
-    -webkit-background-clip: text;  
-    -webkit-text-fill-color: transparent;
-    padding-bottom: 5px;  
-    margin-left: 42%;
-  }
+
   /* #footer {
     background-color: #333;
     color: #fff;
