@@ -12,11 +12,11 @@
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   background-image: url("../assets/podium.jpg");
 
 
-  /* background-position: center; */
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }

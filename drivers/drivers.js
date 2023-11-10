@@ -1,4 +1,4 @@
-import { navbar } from "../utils/componentes.js";
+import { footer, navbar } from "../utils/componentes.js";
 import { foundLoged, getLocalStorage } from "../utils/funcs.js";
 import { drivers } from "../utils/funcs.js";
 import { findUser } from "../utils/funcs.js";
@@ -37,6 +37,9 @@ function generateTable(arr) {
       cell.setAttribute("style", "vertical-align: middle; font-size:22px ")
 
       if (key[j] == "owner") {
+        if(i==6){
+          console.log(arr[i][key[j]])
+        }
         if (arr[i][key[j]]) {
             insertCell(arr[i][key[j]], cell, row);
         } else {
@@ -66,3 +69,5 @@ function insertCell(value, cell, row) {
   cell.appendChild(cellText);
   row.appendChild(cell);
 }
+
+footer()
