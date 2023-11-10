@@ -150,5 +150,5 @@ Además de que hay una barra que se carga haciendo simular operaciones en backgr
 - **Cerrar sesión:** Al seleccionar esta opción, se cerrará la sesión y te llevará de vuelta a la página de inicio de sesión.
 <h2 style="text-align:center">Mapa de navegación</h2>
 <img src="./assets/mapa_navegacion_circular_texto.png"></img>
-<h2 style="text-align:center">Mapa de navegación</h2>
+
 
