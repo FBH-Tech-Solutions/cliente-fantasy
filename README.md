@@ -59,6 +59,25 @@ Colores primer estilo
     * Código Hexadecimal: #192F8F
     El azul egipcio aporta profundidad y elegancia a nuestra paleta de colores. Se usará principalmente en los botones y para el color de los títulos.
 
+* Paleta de colores:
+
+La siguiente imagen muestra los colores a usar en nuestros estilos.
+
+<img src="./assets/paleta.png" width="50%">
+
+<br>
+Para hacerse una idea de como va a quedar la convinación de ambos colores con los estilos, hemos realizado unos mockups.
+
+* Estilo 1:
+
+<img src="./assets/paleta_estilo_1.png" width="50%">
+
+* Estilo 2:
+
+<img src="./assets/paleta_estilo_2.png" width="50%">
+
+
+
 <h3 style="text-align:center">Fuentes</h3>
 <hr>
 
