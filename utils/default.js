@@ -31,27 +31,27 @@ export let newsDefault = [
         "Max Verstappen becomes the Formula 1 World Champion after a season filled with excitement and rivalry with Lewis Hamilton."
       ),
       new New(
-        "../assets/news/worldMax.jpg",
+        "../assets/news/regulation.jpg",
         "New Technical Regulations for the 2023 Season",
         "The FIA has introduced new technical regulations that will significantly change the look of F1 cars starting from the 2023 season."
       ),
       new New(
-        "../assets/news/worldMax.jpg",
+        "../assets/news/redbull.jpg",
         "Red Bull Racing Signs Young Talent",
         "Red Bull Racing has signed a promising young driver for their talent development program in the quest for the next F1 champion."
       ),
       new New(
-        "../assets/news/worldMax.jpg",
+        "../assets/news/sebastian.jpg",
         "Sebastian Vettel Announces Retirement",
         "Four-time world champion Sebastian Vettel has announced his retirement from the sport after a successful career in Formula 1."
       ),
       new New(
-        "../assets/news/worldMax.jpg",
+        "../assets/news/mercedes.jpg",
         "New Main Sponsor for Mercedes",
         "The Mercedes-AMG Petronas team has secured a multimillion-dollar deal with a new main sponsor, providing an additional financial boost to the team."
       ),
       new New(
-        "../assets/news/worldMax.jpg",
+        "../assets/news/weight.jpg",
         "New Minimum Weight Regulation for Drivers",
         "The FIA has introduced a new regulation that establishes a minimum weight for Formula 1 drivers to address health and safety issues in the sport."
       )
