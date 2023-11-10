@@ -36,16 +36,31 @@ Nuestro proyecto se trata de emociones intensas y la emoción de las carreras de
 La paleta de colores desempeña un papel esencial en la identidad visual de la Fórmula 1. Los colores elegidos no solo reflejan la emoción y la velocidad de este emocionante deporte.
 A continuación, se detallan los colores que definen nuestra identidad visual y cómo deben utilizarse en diversos contextos.
 
-Colores primer estilo
+**Colores primer estilo**
 
 - **Rojo F1**
     * Código Hexadecimal: #F91D00
     * El rojo F1 es el color principal y más emblemático de la Fórmula 1. Representa la pasión, la energía y la velocidad del deporte. Para el color de los títulos.
 
 - **Negro Carbón**
-
     * Código Hexadecimal: #15151E
     * El negro carbón simboliza la sofisticación y la tecnología de vanguardia presentes en la Fórmula 1. Se usará principalmente para el fondo
+<br>
+
+- **Titulos**
+<br>
+<img src="./assets/titulo_oscuro.png" width="50%">
+<br>
+
+- **Cards**
+<br>
+<img src="./assets/card_oscuro.png" width="50%">
+<br>
+
+- **Botones**
+<br>
+<img src="./assets/boton_oscuro.png" width="50%">
+<br>
 
 - **Colores segundo estilo**
 
@@ -57,6 +72,21 @@ Colores primer estilo
 - **Azul egipcio**
     * Código Hexadecimal: #192F8F
     El azul egipcio aporta profundidad y elegancia a nuestra paleta de colores. Se usará principalmente en los botones y para el color de los títulos.
+<br>
+
+- **Titulos**
+<br>
+<img src="./assets/titulo_claro.png" width="50%">
+
+- **Cards**
+<br>
+<img src="./assets/card_claro.png" width="50%">
+<br>
+
+- **Botones**
+<br>
+<img src="./assets/boton_claro.png" width="50%">
+<br>
 
 * Paleta de colores:
 
