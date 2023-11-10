@@ -74,7 +74,7 @@ btnLaunch.addEventListener("click", function () {
       setTimeout(function () {
         progresBar.textContent = `${k}%`;
         progresBar.style.width = `${k}%`;
-      }, 100 * k);
+      }, 100 + k);
     })(k);
     k = k + 10;
   }

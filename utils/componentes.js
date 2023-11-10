@@ -27,7 +27,6 @@ export function navbar(user) {
 	if(colorNav== "white" ){
 		collapse= "nav nav-pills flex-column mb-auto"
 		position = "d-flex flex-column flex-shrink-0 p-3 bg-light"
-		document.getElementById("main").style = getLocalStorage("main")
 	}
   }
   
@@ -69,10 +68,11 @@ export function navbar(user) {
 		  </ul>
 		  </li>
 		  
-		  <label class="form-check-label" for="flexSwitchCheckChecked">☀</label>
-		  <div class="form-check form-switch">
-		  <label class="form-check-label" for="flexSwitchCheckChecked">🌑</label>
-		  <input class="form-check-input" type="checkbox" role="switch" id="switch" ${checkSwitch}>
+
+			  <select id="tema" name="tema">
+		  <option value="claro" selected>Claro</option>
+		  <option value="oscuro">Oscuro</option>
+	  </select>
 		</div>
 	  </ul>
 
@@ -84,27 +84,28 @@ let navbar = document.getElementById("navbar")
 navbar.appendChild(newDiv)
 logoutUser(user)
 
-let switchCheck = document.getElementById("switch")
+ let tema =  document.querySelector("#tema")
 
-switchCheck.addEventListener('input',function(){
-	let checked = getLocalStorage("checked")
-	let aux = null
-		if(switchCheck.checked){
-			aux = "checked"
-			switchCheck.removeAttribute("checked")
-			setLocalStorate("color", "dark")
-		}else{
-			aux = ""
-			switchCheck.setAttribute("checked", true)
-			let styleMain =  "display: flex; flex-wrap: nowrap; height: 100vh; max-height: 100vh; overflow-x: auto; overflow-y: hidden;"
-			setLocalStorate("main",styleMain)
-			setLocalStorate("color", "white")
-
+	tema.addEventListener("change",function(){
+		console.log(tema)
+		let i = 0
+		while(i<tema.length){
+			if(tema[i].selected){
+				setLocalStorate("selected", "selected")
+			}
+			i++
 		}
-	setLocalStorate("checked", aux)
-	location.reload();
-})
-
+		if(this.value == "claro"){
+			document.querySelector("body").classList.remove("oscuro");
+			document.querySelector("body").classList.add("claro");
+			setLocalStorate("color","white")
+		}else{
+			document.querySelector("body").classList.remove("claro");
+			document.querySelector("body").classList.add("oscuro");
+			setLocalStorate("color","dark")
+		}
+		// location.reload();
+	});
 }
 
 export function formProfile() {

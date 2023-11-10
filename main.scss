@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "f1";
+  src: url("assets/fonts/f1/Formula1-Regular-1.ttf");
+}
+
+@font-face {
+  font-family: "opensans";
+  src: url("assets/fonts/open-sans/static/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "helvetica";
+  src: url("assets/fonts/helvetica/Helvetica.ttf");
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("assets/fonts/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "sfapple";
+  src: url("assets/fonts/sfapple/SFPro/SF-Pro-Text-Regular.otf");
+}
+
+
+
+body{
+  font-family:"sfapple" !important;
+  font-weight:normal;
+  font-style:normal;
+}
+
+nav{
+  font-family: 'f1', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+  background-color: #15151E;
+}
+
+/*TEMA CLARO*/
+
+$fondoGeneral: #15151E;
+$color: #fff;
+$gradient: linear-gradient(to bottom right, rgb(249, 29, 0), rgb(21, 21, 30));
+$border: #F91D00;
+
+body.tema.oscuro{
+  background-color: $fondoGeneral;
+
+
+  h1 {  
+    font-family: "opensans", Arial, sans-serif;
+    font-size: 60px !important;
+    background: $gradient;
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+  
+  #profile {
+    background-color: $color;
+    padding: 20px;
+    margin-top: 4%;
+    margin-left: 5%;
+  }
+  
+  #profile button {
+    background-color: $border;
+    border-color: $border;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  label {
+    color: $color;
+  }
+  
+  p {
+    color: $color;
+  }
+  
+  #profile{
+    background-color: #15151E;
+  }
+  #profile p, label {
+    color: $color !important;
+  }
+}
+
+/*TEMA */
+$fondoGeneral: #fff;
+$color: #15151E;
+$gradient2: linear-gradient(#fff,10%, #192F8F);
+$border: #192F8F;
+
+body.tema.claro{ 
+
+  background-color: $fondoGeneral;
+
+  h1 {  
+    font-family: "opensans", Arial, sans-serif;
+    font-size: 60px !important;
+    background: $gradient2;
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 5px;  
+    text-align: center;
+  }
+  
+  #profile {
+    background-color: $gradient2;
+    padding: 20px;
+    margin-top: 4%;
+    margin-left: 5%;
+  }
+
+  .card{
+    background: $gradient2;
+    border-color: $border;
+  }
+  
+  #profile button {
+    background-color: $border;
+    border-color: $border;
+    text-align: center;
+    padding: 10px;
+  }
+
+  #submit {
+    background-color: $border;
+    border-color: $border;
+  }
+  
+  label {
+    color: $fondoGeneral !important;
+  }
+  h5{
+    color: $fondoGeneral;
+  }
+
+  p {
+    color: $fondoGeneral !important;
+  }
+  
+
+  #profile{
+    background-color: #fff;
+  }
+  #profile p, label {
+    color: $color !important;
+  }
+
+  #footer p{
+    color: $fondoGeneral !important;
+  }
+  }
+
+
+  

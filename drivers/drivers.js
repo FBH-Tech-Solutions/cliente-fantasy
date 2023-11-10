@@ -22,6 +22,16 @@ generateTable(arr);
 
 function generateTable(arr) {
   const tbl = document.getElementById("table");
+
+  let color = getLocalStorage("color")
+  if(color=="white"){
+    let tema = "table table-striped text-center"
+    tbl.setAttribute("class", tema)
+  }else if(color=="dark" || color == null){
+    let tema = "table table-striped table-dark text-center"
+    tbl.setAttribute("class", tema)
+  }
+  
   const tblBody = document.getElementById("tbody");
 
   for (let i = 0; i < arr.length; i++) {

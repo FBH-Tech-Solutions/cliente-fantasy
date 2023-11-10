@@ -4,6 +4,17 @@ import { foundLoged, getLocalStorage, sendNotification } from "../utils/funcs.js
 
 navbar(foundLoged());
 
+let tema = null
+let color = getLocalStorage("color")
+if(color=="white"){
+   tema = "table table-striped text-center"
+
+}else if(color=="dark" || color == null){
+  tema = "table table-striped table-dark text-center"
+}
+
+document.getElementById("table").setAttribute("class", tema)
+
 
 function loadRanking(){
     var users=getLocalStorage("users")
